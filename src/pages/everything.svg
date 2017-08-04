@@ -68,7 +68,7 @@
   <style
      id="style4"
      type="text/css"><![CDATA[
-        * {user-select:none}
+        * {cursor:default; user-select:none}
         .nomouse {pointer-events:none}
         .action-jog-configured-distance.index-1 {fill:#00ffff} 
         .action-jog-configured-distance.index-2 {fill:#00c0ff} 
@@ -567,7 +567,7 @@
         let height = svg.height.baseVal.valueInSpecifiedUnits;
 
         let loadedMsg = {
-            type: 'loadedSvg',
+            type: 'loaded',
             inputFontSize: '10mm',
             width, height, elements,
         };

@@ -7,8 +7,8 @@ export default class Controller extends React.Component {
         this.state = {
             width: 0,
             height: 0,
-            svgWidth: 0,
-            svgHeight: 0,
+            contentWidth: 0,
+            contentHeight: 0,
             visibility: 'hidden'
         };
         this.transform = '';
@@ -17,7 +17,7 @@ export default class Controller extends React.Component {
     componentDidMount() {
         this.mounted = true;
         let node = ReactDOM.findDOMNode(this);
-        this.svgContainer = node.children[0];
+        this.iframe = node.children[0];
 
         let checkResize = () => {
             if (!this.mounted)
@@ -31,10 +31,10 @@ export default class Controller extends React.Component {
         checkResize();
 
         this.receiveMessage = e => {
-            if (e.source !== this.svgContainer.contentWindow)
+            if (e.source !== this.iframe.contentWindow)
                 return;
-            if (e.data.type === 'loadedSvg')
-                this.setState({ svgWidth: e.data.width, svgHeight: e.data.height });
+            if (e.data.type === 'loaded')
+                this.setState({ contentWidth: e.data.width, contentHeight: e.data.height });
             else if (e.data.type === 'ackSetTransform' && this.state.visibility !== 'visible')
                 this.setState({ visibility: 'visible' });
             console.log(e.data);
@@ -48,19 +48,19 @@ export default class Controller extends React.Component {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        let { width, height, svgWidth, svgHeight } = nextState;
+        let { width, height, contentWidth, contentHeight } = nextState;
         let transform = '';
-        if (width && height && svgWidth && svgHeight)
-            transform = 'scale(' + Math.min(width / svgWidth, height / svgHeight) + ')';
+        if (width && height && contentWidth && contentHeight)
+            transform = 'scale(' + Math.min(width / contentWidth, height / contentHeight) + ')';
         if (this.transform !== transform) {
             this.transform = transform;
-            if (this.svgContainer)
-                this.svgContainer.contentWindow.postMessage({ type: 'setTransform', transform }, '*');
+            if (this.iframe)
+                this.iframe.contentWindow.postMessage({ type: 'setTransform', transform }, '*');
         }
     }
 
     render() {
-        let { width, height, svgWidth, svgHeight } = this.state;
+        let { width, height, contentWidth, contentHeight } = this.state;
         return (
             <div style={{ position: 'absolute', backgroundColor: 'maginta', left: 0, top: 0, width: '100%', height: '100%', visibility: this.state.visibility }}>
                 <iframe
