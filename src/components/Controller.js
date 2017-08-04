@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 const fields = {
@@ -45,7 +45,7 @@ export default class Controller extends React.Component {
                 });
             else if (e.data.type === 'ackSetTransform' && this.state.visibility !== 'visible')
                 this.setState({ visibility: 'visible' });
-            console.log(e.data);
+            //console.log(e.data);
         };
         window.addEventListener("message", this.receiveMessage, false);
     }
