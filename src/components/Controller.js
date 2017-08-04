@@ -1,6 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 
+const fields = {
+    foo: { type: 'input', props: { type: 'number', step: 'any' } },
+};
+
 export default class Controller extends React.Component {
     constructor() {
         super();
@@ -9,6 +13,7 @@ export default class Controller extends React.Component {
             height: 0,
             contentWidth: 0,
             contentHeight: 0,
+            elements: [],
             visibility: 'hidden'
         };
         this.transform = '';
@@ -34,7 +39,10 @@ export default class Controller extends React.Component {
             if (e.source !== this.iframe.contentWindow)
                 return;
             if (e.data.type === 'loaded')
-                this.setState({ contentWidth: e.data.width, contentHeight: e.data.height });
+                this.setState({
+                    contentWidth: e.data.width, contentHeight: e.data.height,
+                    elements: e.data.elements
+                });
             else if (e.data.type === 'ackSetTransform' && this.state.visibility !== 'visible')
                 this.setState({ visibility: 'visible' });
             console.log(e.data);
@@ -60,14 +68,35 @@ export default class Controller extends React.Component {
     }
 
     render() {
-        let { width, height, contentWidth, contentHeight } = this.state;
+        let { width, height, contentWidth, contentHeight, elements } = this.state;
+        let controls = [];
+
+        for (let elem of elements) {
+            if (elem.type === 'field') {
+                let { left, top, width, height, fontSize } = elem;
+                let field = fields[elem.field] || { type: 'input', props: { value: "unrecognized", readOnly: true } };
+                controls.push(<field.type
+                    key={elem.id} {...field.props}
+                    style={{ position: 'absolute', left, top, width, height, fontSize }} />);
+            }
+        }
+
         return (
-            <div style={{ position: 'absolute', backgroundColor: 'maginta', left: 0, top: 0, width: '100%', height: '100%', visibility: this.state.visibility }}>
+            <div style={{
+                position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
+                visibility: this.state.visibility
+            }}>
                 <iframe
                     width={width} height={height} style={{ border: 'none' }}
                     referrerPolicy='no-referrer' sandbox='allow-scripts'
                     src="everything.svg"
                 />
+                <div style={{
+                    position: 'absolute', left: 0, top: 0, transformOrigin: 'top left',
+                    transform: this.transform, visibility: this.state.visibility
+                }}>
+                    {controls}
+                </div>
             </div>);
     }
 } // Controller

@@ -30,9 +30,9 @@
      objecttolerance="10"
      pagecolor="#ffffff"
      showgrid="true"
-     inkscape:current-layer="g181"
-     inkscape:cx="540.84856"
-     inkscape:cy="-10.42959"
+     inkscape:current-layer="svg1"
+     inkscape:cx="805.84856"
+     inkscape:cy="-7.42959"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -170,7 +170,7 @@
      height="10"
      x="222.24861"
      y="20.997171"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;field&quot;:&quot;foo&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-7"
@@ -178,7 +178,7 @@
      height="10"
      x="222.24861"
      y="50.997173"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-2"
@@ -186,7 +186,7 @@
      height="10"
      x="222.24861"
      y="80.997169"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-8"
@@ -194,7 +194,7 @@
      height="10"
      x="222.24861"
      y="110.99717"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-25"
@@ -202,7 +202,7 @@
      height="10"
      x="282.24863"
      y="20.997171"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-7-4"
@@ -210,7 +210,7 @@
      height="10"
      x="282.24863"
      y="50.997173"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-2-5"
@@ -218,7 +218,7 @@
      height="10"
      x="282.24863"
      y="80.997169"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <rect
      id="rect5039-8-1"
@@ -226,7 +226,7 @@
      height="10"
      x="282.24863"
      y="110.99717"
-     inkscape:label="{&quot;type&quot;:&quot;input&quot;}"
+     inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;fontSize&quot;:&quot;10mm&quot;}"
      style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   <g
      id="g181"
@@ -568,7 +568,6 @@
 
         let loadedMsg = {
             type: 'loaded',
-            inputFontSize: '10mm',
             width, height, elements,
         };
         window.parent.postMessage(loadedMsg, '*');
