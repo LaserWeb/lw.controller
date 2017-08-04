@@ -8,7 +8,8 @@ module.exports = {
     context: src_path,
     entry: [
         'webpack-dev-server/client?http://0.0.0.0:8080', 'webpack/hot/only-dev-server', 'babel-polyfill', './standalone/index.js',
-        'file-loader?name=index.html!./standalone/index.html'],
+        'file-loader?name=index.html!./standalone/index.html',
+        'file-loader?name=everything.svg!./pages/everything.svg'],
     output: {
         path: dist_path,
         filename: 'index.js'
