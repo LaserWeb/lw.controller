@@ -41,16 +41,17 @@
     "babel-preset-react": "^6.11.1",
     "file-loader": "^0.11.2",
     "lw.comm-server": "git+https://github.com/LaserWeb/lw.comm-server.git",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-hot-loader": "^3.0.0-beta.4",
     "react-redux": "^4.4.5",
-    "react": "^15.3.1",
-    "redux-localstorage-filter": "^0.1.1",
-    "redux-localstorage": "^1.0.0-rc5",
-    "redux-logger": "^2.6.1",
     "redux": "^3.6.0",
-    "webpack-dev-server": "^1.15.1",
-    "webpack": "^1.13.2"
+    "redux-localstorage": "^1.0.0-rc5",
+    "redux-localstorage-filter": "^0.1.1",
+    "redux-logger": "^2.6.1",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
   },
   "dependencies": {}
 }
