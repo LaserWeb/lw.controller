@@ -222,11 +222,16 @@ class Com extends React.Component {
 
                     // Extract machineStatus
                     comAttrs.machineStatus = data.substring(data.indexOf('<') + 1, data.search(/(,|\|)/));
+                    if (comAttrs.machineStatus === 'Alarm')
+                        comAttrs = { ...comAttrs, playing: false, paused: false, m0: false, alarm: true };
+                    else
+                        comAttrs.alarm = false;
                 } else {
                     let style = CommandHistory.STD;
                     if (data.indexOf('[MSG:') === 0) {
                         style = CommandHistory.WARN;
                     } else if (data.indexOf('ALARM:') === 0) {
+                        comAttrs = { ...comAttrs, playing: false, paused: false, m0: false, alarm: true };
                         style = CommandHistory.DANGER;
                     } else if (data.indexOf('error:') === 0) {
                         style = CommandHistory.DANGER;
@@ -461,7 +466,7 @@ class Com extends React.Component {
             this.setComAttrs({ runStatus, playing: false, paused: false, m0: false, });
         } else if (runStatus === 'alarm') {
             CommandHistory.error('ALARM!')
-            this.setComAttrs({ runStatus, playing: false, paused: false, m0: false, });
+            this.setComAttrs({ runStatus, playing: false, paused: false, m0: false, alarm: true, });
             //this.socket.emit('clearAlarm', 2);
         } else {
             this.setComAttrs({ runStatus });

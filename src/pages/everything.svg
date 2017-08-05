@@ -30,9 +30,9 @@
      objecttolerance="10000"
      pagecolor="#ffffff"
      showgrid="true"
-     inkscape:current-layer="g2218-35"
-     inkscape:cx="62.133336"
-     inkscape:cy="470.44093"
+     inkscape:current-layer="g2218-7"
+     inkscape:cx="42.625754"
+     inkscape:cy="529.34998"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -41,7 +41,7 @@
      inkscape:window-width="2822"
      inkscape:window-x="786"
      inkscape:window-y="166"
-     inkscape:zoom="11.313708"
+     inkscape:zoom="5.6568542"
      units="mm"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="false"
@@ -1136,12 +1136,6 @@
          inkscape:label="{&quot;indicator&quot;:&quot;playing&quot;}"
          id="g2218-7"
          style="display:inline;overflow:hidden">
-        <path
-           inkscape:label="{&quot;classes&quot;:[&quot;hide-true&quot;]}"
-           inkscape:connector-curvature="0"
-           id="path2220-0"
-           d="m 77.666664,173.83468 -1,1.09375 2.000001,3.28125 -2.000001,3.28125 1,1.09376 2.000001,-3.28126 2.000001,3.28126 0.999999,-1.09376 -2.000001,-3.28125 2.000001,-3.28125 -0.999999,-1.09375 -2.000001,3.28125 z"
-           style="display:inline;overflow:hidden;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:0.13835391px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <rect
            y="173.30553"
            x="75.60833"
@@ -1234,6 +1228,48 @@
              y="182.0495"
              x="84.393845"
              id="tspan4979-8-7-6-52-6-0-2-9">Server Connected</tspan></text>
+      </g>
+      <g
+         transform="translate(8.3916706,30.710991)"
+         inkscape:label="{&quot;indicator&quot;:&quot;alarm&quot;}"
+         id="g2218-35-2"
+         style="display:inline;overflow:hidden">
+        <path
+           sodipodi:type="star"
+           style="display:inline;overflow:hidden;fill:#ff0000;fill-opacity:1;stroke:none;stroke-width:8.96500015;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path319"
+           sodipodi:sides="5"
+           sodipodi:cx="78.914016"
+           sodipodi:cy="178.24821"
+           sodipodi:r1="7.6599717"
+           sodipodi:r2="2.2961278"
+           sodipodi:arg1="0.93584378"
+           sodipodi:arg2="1.5641622"
+           inkscape:flatsided="true"
+           inkscape:rounded="0"
+           inkscape:randomized="0"
+           d="m 83.457446,184.41525 -9.004638,0.0597 -2.839401,-8.54546 7.249793,-5.34113 7.320019,5.24447 z"
+           inkscape:transform-center-x="0.18081745"
+           inkscape:transform-center-y="-0.079967983"
+           inkscape:label="{&quot;classes&quot;:[&quot;hide-false&quot;]}"
+           transform="matrix(0.58853806,0,0,0.5883009,32.636226,73.528697)" />
+        <rect
+           y="173.30553"
+           x="75.60833"
+           height="10"
+           width="117.05833"
+           id="rect2237-8-8"
+           style="display:inline;overflow:hidden;fill:none;fill-opacity:1;stroke:none;stroke-width:31.30515671;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+           y="182.0495"
+           x="84.393845"
+           id="text4981-9-4-0-0-0-97-5-4-8"><tspan
+             style="font-size:10.58333302px;line-height:5px;stroke-width:0.26458332"
+             y="182.0495"
+             x="84.393845"
+             id="tspan4979-8-7-6-52-6-0-2-6-5">Alarm</tspan></text>
       </g>
     </g>
     <g

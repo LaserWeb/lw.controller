@@ -64,7 +64,7 @@ export default class ConnectionBar extends React.Component {
 
                 {portOrIp}
 
-                <button onClick={e => comComponent.toggleConnectToMachine()}>{machineButtonText}</button>
+                <button disabled={!com.serverConnected} onClick={e => comComponent.toggleConnectToMachine()}>{machineButtonText}</button>
             </div>
         );
     }

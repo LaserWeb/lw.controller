@@ -13,6 +13,7 @@ export const COM_INITIALSTATE = {
     playing: false,
     paused: false,
     m0: false,
+    alarm: false,
     laserTestOn: false,
     firmware: '',
     firmwareVersion: '',
