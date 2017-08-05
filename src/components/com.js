@@ -14,6 +14,19 @@ let CommandHistory = {
     error(msg) { console.error(msg) },
 };
 
+function secToHMS(sec) {
+    let hours = Math.floor(sec / 3600);
+    let minutes = Math.floor(sec / 60) % 60;
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    }
+    let seconds = sec % 60;
+    if (seconds < 10) {
+        seconds = '0' + seconds;
+    }
+    return hours + ':' + minutes + ':' + seconds;
+}
+
 class Com extends React.Component {
     constructor(props) {
         super(props);
@@ -53,7 +66,6 @@ class Com extends React.Component {
     }
 
     handleConnectServer() {
-        let { dispatch } = this.props;
         let server = this.props.settings.comServerIP;
         CommandHistory.write('Connecting to Server @ ' + server, CommandHistory.INFO);
         this.socket = io('ws://' + server);
@@ -185,26 +197,27 @@ class Com extends React.Component {
             //CommandHistory.write('runStatus: ' + status);
             console.log('runStatus: ' + status);
             if (status === 'running') {
-                playing = true;
-                paused = false;
+                this.playing = true;
+                this.paused = false;
             } else if (status === 'paused') {
-                paused = true;
+                this.paused = true;
             } else if (status === 'm0') {
-                paused = true;
-                m0 = true;
+                this.paused = true;
+                this.m0 = true;
             } else if (status === 'resumed') {
-                paused = false;
+                this.paused = false;
             } else if (status === 'stopped') {
-                playing = false;
-                paused = false;
+                this.playing = false;
+                this.paused = false;
             } else if (status === 'finished') {
-                playing = false;
-                paused = false;
+                this.playing = false;
+                this.paused = false;
             } else if (status === 'alarm') {
                 CommandHistory.error('ALARM!')
                 //this.socket.emit('clearAlarm', 2);
             }
-            runStatus(status);
+            this.setComAttrs({ playing: this.playing, paused: this.paused });
+            //!!! runStatus(status);
         });
 
         this.socket.on('data', data => {
@@ -212,7 +225,7 @@ class Com extends React.Component {
             if (data) {
                 if (data.indexOf('<') === 0) {
                     //CommandHistory.write('statusReport: ' + data);
-                    updateStatus(data);
+                    //!!! updateStatus(data);
                 } else {
                     let style = CommandHistory.STD;
                     if (data.indexOf('[MSG:') === 0) {
@@ -329,10 +342,11 @@ class Com extends React.Component {
             this.setComAttrs({ serverConnected: true });
             //console.log('qCount ' + data);
             data = parseInt(data);
-            if (playing && data === 0) {
-                playing = false;
-                paused = false;
-                runStatus('stopped');
+            if (this.playing && data === 0) {
+                this.playing = false;
+                this.paused = false;
+                this.setComAttrs({ playing: this.playing, paused: this.paused });
+                //!!! runStatus('stopped');
 
                 if (jobStartTime >= 0) {
                     let jobFinishTime = new Date(Date.now());
@@ -363,23 +377,57 @@ class Com extends React.Component {
             CommandHistory.error('Server error: ' + data)
             //console.log('error: ' + data);
         });
+    } // handleConnectServer()
 
+    handleDisconnectServer() {
+        if (this.socket) {
+            CommandHistory.write('Disconnecting from server', CommandHistory.INFO);
+            this.socket.disconnect();
+            let serverVersion = 'not connected';
+            this.setSettingsAttrs({ comServerVersion: serverVersion });
+        }
+    }
 
+    handleConnectMachine() {
+        var connectVia = this.props.settings.connectVia;
+        var connectPort = this.props.settings.connectPort.trim();
+        var connectBaud = this.props.settings.connectBaud;
+        var connectIP = this.props.settings.connectIP;
+        switch (connectVia) {
+            case 'USB':
+                if (!connectPort) {
+                    CommandHistory.write('Could not connect! -> please select port', CommandHistory.DANGER);
+                    break;
+                }
+                if (!connectBaud) {
+                    CommandHistory.write('Could not connect! -> please select baudrate', CommandHistory.DANGER);
+                    break;
+                }
+                CommandHistory.write('Connecting Machine @ ' + connectVia + ',' + connectPort + ',' + connectBaud + 'baud', CommandHistory.INFO);
+                this.socket.emit('connectTo', connectVia + ',' + connectPort + ',' + connectBaud);
+                break;
+            case 'Telnet':
+                if (!connectIP) {
+                    CommandHistory.write('Could not connect! -> please enter IP address', CommandHistory.DANGER);
+                    break;
+                }
+                CommandHistory.write('Connecting Machine @ ' + connectVia + ',' + connectIP, CommandHistory.INFO);
+                this.socket.emit('connectTo', connectVia + ',' + connectIP);
+                break;
+            case 'ESP8266':
+                if (!connectIP) {
+                    CommandHistory.write('Could not connect! -> please enter IP address', CommandHistory.DANGER);
+                    break;
+                }
+                CommandHistory.write('Connecting Machine @ ' + connectVia + ',' + connectIP, CommandHistory.INFO);
+                this.socket.emit('connectTo', connectVia + ',' + connectIP);
+                break;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    handleDisconnectMachine() {
+        CommandHistory.write('Disconnecting Machine', CommandHistory.INFO);
+        this.socket.emit('closePort');
     }
 
     render() {
@@ -391,7 +439,7 @@ class Com extends React.Component {
             </div >
         );
     }
-};
+}; // Com
 Com.childContextTypes = {
     comComponent: PropTypes.any,
 };
