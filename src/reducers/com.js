@@ -7,6 +7,8 @@ export const COM_INITIALSTATE = {
     paused: false,
     firmware: '',
     firmwareVersion: '',
+    workOffset: [0, 0, 0, 0],
+    wpos: [0, 0, 0],
 
     comInterfaces: [],
     comPorts: []

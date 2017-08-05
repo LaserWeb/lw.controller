@@ -49,7 +49,7 @@ const middleware = compose(
     persistState(storage, LOCALSTORAGE_KEY),
 );
 
-const store = createStore(reducer, middleware);
+export const store = createStore(reducer, middleware);
 
 function Hot(props) {
     const Main = require('./components/main.js').default;
