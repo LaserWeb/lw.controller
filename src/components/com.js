@@ -30,8 +30,7 @@ function secToHMS(sec) {
 class Com extends React.Component {
     constructor(props) {
         super(props);
-        let { comInterfaces, comPorts, comAccumulatedJobTime } = this.props.settings;
-        this.state = { comInterfaces, comPorts, comAccumulatedJobTime };
+        this.jobStartTime = -1;
     }
 
     getChildContext() {
@@ -58,6 +57,10 @@ class Com extends React.Component {
                 return;
             }
         }
+    }
+
+    getSettingsAttrs() {
+        return store.getState().settings;
     }
 
     setSettingsAttrs(attrs) {
@@ -100,7 +103,6 @@ class Com extends React.Component {
                 let interfaces = new Array();
                 for (let i = 0; i < data.length; i++)
                     interfaces.push(data[i]);
-                this.setState({ comInterfaces: interfaces });
                 this.setSettingsAttrs({ comInterfaces: interfaces });
                 console.log('interfaces: ' + interfaces);
                 //CommandHistory.write('interfaces: ' + interfaces);
@@ -116,7 +118,6 @@ class Com extends React.Component {
                 for (let i = 0; i < data.length; i++) {
                     ports.push(data[i].comName);
                 }
-                this.setState({ comPorts: ports });
                 this.setSettingsAttrs({ comPorts: ports });
                 //console.log('ports: ' + ports);
                 CommandHistory.write('Serial ports detected: ' + JSON.stringify(ports));
@@ -341,14 +342,15 @@ class Com extends React.Component {
 
         // laserTest state
         this.socket.on('laserTest', data => {
-            this.setComAttrs({ serverConnected: true });
+            let attrs = { serverConnected: true };
             //CommandHistory.write('laserTest: ' + data, CommandHistory.STD);
             //console.log('laserTest ' + data);
             if (data > 0) {
-                laserTestOn = true;
+                attrs.laserTestOn = true;
             } else if (data === 0) {
-                laserTestOn = false;
+                attrs.laserTestOn = false;
             }
+            this.setComAttrs(attrs);
         });
 
         this.socket.on('qCount', data => {
@@ -359,16 +361,15 @@ class Com extends React.Component {
                 this.setComAttrs({ playing: false, paused: false, m0: false });
                 //!!! runStatus('stopped');
 
-                if (jobStartTime >= 0) {
+                if (this.jobStartTime >= 0) {
                     let jobFinishTime = new Date(Date.now());
-                    let elapsedTimeMS = jobFinishTime.getTime() - jobStartTime.getTime();
+                    let elapsedTimeMS = jobFinishTime.getTime() - this.jobStartTime.getTime();
                     let elapsedTime = Math.round(elapsedTimeMS / 1000);
-                    CommandHistory.write("Job started at " + jobStartTime.toString(), CommandHistory.SUCCESS);
+                    CommandHistory.write("Job started at " + this.jobStartTime.toString(), CommandHistory.SUCCESS);
                     CommandHistory.write("Job finished at " + jobFinishTime.toString(), CommandHistory.SUCCESS);
                     CommandHistory.write("Elapsed time: " + secToHMS(elapsedTime), CommandHistory.SUCCESS);
-                    jobStartTime = -1;
-                    accumulatedJobTime += elapsedTime;
-                    let AJT = accumulatedJobTime;
+                    this.jobStartTime = -1;
+                    let AJT = this.getSettingsAttrs().comAccumulatedJobTime + elapsedTime;
                     this.setSettingsAttrs({ comAccumulatedJobTime: AJT });
                     CommandHistory.write("Total accumulated job time: " + secToHMS(AJT), CommandHistory.SUCCESS);
                 }
@@ -459,7 +460,7 @@ class Com extends React.Component {
         if (gcode) {
             //CommandHistory.write('Running Command', CommandHistory.INFO);
             //console.log('runCommand', gcode);
-            socket.emit('runCommand', gcode);
+            this.socket.emit('runCommand', gcode);
         }
     }
 
@@ -470,8 +471,8 @@ class Com extends React.Component {
             CommandHistory.write('Running Job', CommandHistory.INFO);
             this.setComAttrs({ playing: true });
             //!!! runStatus('running');
-            jobStartTime = new Date(Date.now());
-            socket.emit('runJob', job);
+            this.jobStartTime = new Date(Date.now());
+            this.socket.emit('runJob', job);
         } else {
             CommandHistory.error('Job empty!')
         }
@@ -483,7 +484,7 @@ class Com extends React.Component {
             return;
         this.setComAttrs({ paused: true });
         //!!! runStatus('paused');
-        socket.emit('pause');
+        this.socket.emit('pause');
     }
 
     resumeJob() {
@@ -492,7 +493,7 @@ class Com extends React.Component {
             return;
         this.setComAttrs({ paused: false, m0: false });
         //!!! runStatus('running');
-        socket.emit('resume');
+        this.socket.emit('resume');
     }
 
     abortJob() {
@@ -502,7 +503,7 @@ class Com extends React.Component {
         CommandHistory.write('Aborting job', CommandHistory.INFO);
         this.setComAttrs({ playing: false, paused: false, m0: false });
         //!!! runStatus('stopped');
-        socket.emit('stop');
+        this.socket.emit('stop');
     }
 
     clearAlarm(method) {
@@ -510,84 +511,84 @@ class Com extends React.Component {
         if (!checkConnected())
             return;
         CommandHistory.write('Resetting alarm', CommandHistory.INFO);
-        socket.emit('clearAlarm', method);
+        this.socket.emit('clearAlarm', method);
     }
 
     setZero(axis) {
         if (!checkConnected())
             return;
         CommandHistory.write('Set ' + axis + ' Axis zero', CommandHistory.INFO);
-        socket.emit('setZero', axis);
+        this.socket.emit('setZero', axis);
     }
 
     gotoZero(axis) {
         if (!checkConnected())
             return;
         CommandHistory.write('Goto ' + axis + ' zero', CommandHistory.INFO);
-        socket.emit('gotoZero', axis);
+        this.socket.emit('gotoZero', axis);
     }
 
     setPosition(data) {
         if (!checkConnected())
             return;
         CommandHistory.write('Set position to ' + JSON.stringify(data), CommandHistory.INFO);
-        socket.emit('setPosition', data);
+        this.socket.emit('setPosition', data);
     }
 
     home(axis) {
         if (!checkConnected())
             return;
         CommandHistory.write('Home ' + axis, CommandHistory.INFO);
-        socket.emit('home', axis);
+        this.socket.emit('home', axis);
     }
 
     probe(axis, offset) {
         if (!checkConnected())
             return;
         CommandHistory.write('Probe ' + axis + ' (Offset:' + offset + ')', CommandHistory.INFO);
-        socket.emit('probe', { axis: axis, offset: offset });
+        this.socket.emit('probe', { axis: axis, offset: offset });
     }
 
     laserTest(power, duration, maxS) {
         if (!checkConnected())
             return;
         console.log('laserTest(' + power + ', ' + duration + ', ' + maxS + ')');
-        socket.emit('laserTest', power + ',' + duration + ',' + maxS);
+        this.socket.emit('laserTest', power + ',' + duration + ',' + maxS);
     }
 
     jog(axis, dist, feed) {
         if (!checkConnected())
             return;
         //console.log('jog(' + axis + ',' + dist + ',' + feed + ')');
-        socket.emit('jog', axis + ',' + dist + ',' + feed);
+        this.socket.emit('jog', axis + ',' + dist + ',' + feed);
     }
 
     jogTo(x, y, z, mode, feed) {
         if (!checkConnected())
             return;
         //console.log('jog(' + axis + ',' + dist + ',' + feed + ')');
-        socket.emit('jogTo', { x: x, y: y, z: z, mode: mode, feed: feed });
+        this.socket.emit('jogTo', { x: x, y: y, z: z, mode: mode, feed: feed });
     }
 
     feedOverride(step) {
         if (!checkConnected())
             return;
         console.log('feedOverride ' + step);
-        socket.emit('feedOverride', step);
+        this.socket.emit('feedOverride', step);
     }
 
     spindleOverride(step) {
         if (!checkConnected())
             return;
         console.log('spindleOverride ' + step);
-        socket.emit('spindleOverride', step);
+        this.socket.emit('spindleOverride', step);
     }
 
     resetMachine() {
         if (!checkConnected())
             return;
         CommandHistory.error('Resetting Machine')
-        socket.emit('resetMachine');
+        this.socket.emit('resetMachine');
     }
 
     playpauseMachine() {
@@ -601,7 +602,7 @@ class Com extends React.Component {
                 if (laseroncmd.length === 0) {
                     laseroncmd = 0;
                 }
-                socket.emit('resume', laseroncmd);
+                this.socket.emit('resume', laseroncmd);
                 this.setComAttrs({ paused: false });
                 // !!! runStatus('running');
                 // end ifPaused
@@ -611,7 +612,7 @@ class Com extends React.Component {
                 if (laseroffcmd.length === 0) {
                     laseroffcmd = 0;
                 }
-                socket.emit('pause', laseroffcmd);
+                this.socket.emit('pause', laseroffcmd);
                 this.setComAttrs({ paused: true });
                 // !!! runStatus('paused');
             }

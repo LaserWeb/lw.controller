@@ -7,6 +7,7 @@ export const COM_INITIALSTATE = {
     playing: false,
     paused: false,
     m0: false,
+    laserTestOn: false,
     firmware: '',
     firmwareVersion: '',
     workOffset: [0, 0, 0, 0],
