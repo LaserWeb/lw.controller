@@ -76,22 +76,22 @@ class Com extends React.Component {
     connectToServer() {
         let server = this.props.settings.comServerIP;
         CommandHistory.write('Connecting to Server @ ' + server, CommandHistory.INFO);
-        this.socket = io('ws://' + server);
+        let socket = this.socket = io('ws://' + server);
         this.setComAttrs({ serverConnecting: true, serverConnected: false, machineConnecting: false, machineConnected: false });
 
-        this.socket.on('connect', data => {
+        socket.on('connect', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
-            this.socket.emit('getServerConfig');
+            socket.emit('getServerConfig');
             CommandHistory.write('Server connected', CommandHistory.SUCCESS);
         });
 
-        this.socket.on('disconnect', () => {
+        socket.on('disconnect', () => {
             CommandHistory.error('Disconnected from Server ' + server)
             this.setComAttrs({ serverConnecting: false, serverConnected: false, machineConnecting: false, machineConnected: false });
             this.socket = null;
         });
 
-        this.socket.on('serverConfig', data => {
+        socket.on('serverConfig', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             let serverVersion = data.serverVersion;
             this.setComAttrs({ serverVersion: serverVersion });
@@ -99,7 +99,7 @@ class Com extends React.Component {
             console.log('serverVersion: ' + serverVersion);
         });
 
-        this.socket.on('interfaces', data => {
+        socket.on('interfaces', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 let interfaces = new Array();
@@ -113,7 +113,7 @@ class Com extends React.Component {
             }
         });
 
-        this.socket.on('ports', data => {
+        socket.on('ports', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 let ports = new Array();
@@ -128,7 +128,7 @@ class Com extends React.Component {
             }
         });
 
-        this.socket.on('activeInterface', data => {
+        socket.on('activeInterface', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual interface
@@ -136,7 +136,7 @@ class Com extends React.Component {
             console.log('activeInterface: ' + data);
         });
 
-        this.socket.on('activePort', data => {
+        socket.on('activePort', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual port
@@ -144,7 +144,7 @@ class Com extends React.Component {
             console.log('activePorts: ' + data);
         });
 
-        this.socket.on('activeBaudRate', data => {
+        socket.on('activeBaudRate', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual baudrate
@@ -152,7 +152,7 @@ class Com extends React.Component {
             console.log('activeBaudrate: ' + data);
         });
 
-        this.socket.on('activeIP', data => {
+        socket.on('activeIP', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual machine IP
@@ -160,7 +160,7 @@ class Com extends React.Component {
             console.log('activeIP: ' + data);
         });
 
-        this.socket.on('connectStatus', data => {
+        socket.on('connectStatus', data => {
             console.log('connectStatus: ' + data);
             let comAttrs = { serverConnecting: false, serverConnected: true };
             if (data.indexOf('opened') >= 0) {
@@ -176,7 +176,7 @@ class Com extends React.Component {
             this.setComAttrs(comAttrs);
         });
 
-        this.socket.on('firmware', data => {
+        socket.on('firmware', data => {
             console.log('firmware: ' + JSON.stringify(data));
             let firmware = data.firmware;
             let fVersion = data.version;
@@ -192,24 +192,25 @@ class Com extends React.Component {
             CommandHistory.write('Firmware ' + firmware + ' ' + fVersion + ' detected', CommandHistory.SUCCESS);
             if (firmware === 'grbl' && fVersion < '1.1e') {
                 CommandHistory.error('Grbl version too old -> YOU MUST INSTALL AT LEAST GRBL 1.1e')
-                this.socket.emit('closePort', 1);
+                socket.emit('closePort', 1);
                 comAttrs.machineConnected = false;
                 //console.log('GRBL < 1.1 not supported!');
             }
             this.setComAttrs(comAttrs);
         });
 
-        this.socket.on('runningJob', data => {
+        socket.on('runningJob', data => {
             CommandHistory.write('runningJob(' + data.length + ')', CommandHistory.WARN);
-            alert(data);
+            this.setRunStatus('running');
+            //alert(data);
             //setGcode(data);
         });
 
-        this.socket.on('runStatus', runStatus => {
+        socket.on('runStatus', runStatus => {
             this.setRunStatus(runStatus);
         });
 
-        this.socket.on('data', data => {
+        socket.on('data', data => {
             let comAttrs = { serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true };
             if (data) {
                 if (data.indexOf('<') === 0) {
@@ -236,7 +237,7 @@ class Com extends React.Component {
             this.setComAttrs(comAttrs);
         });
 
-        this.socket.on('wPos', wpos => {
+        socket.on('wPos', wpos => {
             let comAttrs = { serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true };
             let { x, y, z, a } = wpos; //let pos = wpos.split(',');
             let posChanged = false;
@@ -264,7 +265,7 @@ class Com extends React.Component {
             this.setComAttrs(comAttrs);
         });
 
-        this.socket.on('wOffset', wOffset => {
+        socket.on('wOffset', wOffset => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true });
             let { x, y, z, a } = wOffset;
             x = Number(x)
@@ -296,35 +297,35 @@ class Com extends React.Component {
         });
 
         // feed override report (from server)
-        this.socket.on('feedOverride', data => {
+        socket.on('feedOverride', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('feedOverride: ' + data, CommandHistory.STD);
             //console.log('feedOverride ' + data);
         });
 
         // spindle override report (from server)
-        this.socket.on('spindleOverride', data => {
+        socket.on('spindleOverride', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('spindleOverride: ' + data, CommandHistory.STD);
             //console.log('spindleOverride ' + data);
         });
 
         // real feed report (from server)
-        this.socket.on('realFeed', data => {
+        socket.on('realFeed', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('realFeed: ' + data, CommandHistory.STD);
             //console.log('realFeed ' + data);
         });
 
         // real spindle report (from server)
-        this.socket.on('realSpindle', data => {
+        socket.on('realSpindle', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('realSpindle: ' + data, CommandHistory.STD);
             //console.log('realSpindle ' + data);
         });
 
         // laserTest state
-        this.socket.on('laserTest', data => {
+        socket.on('laserTest', data => {
             let comAttrs = { serverConnecting: false, serverConnected: true };
             //CommandHistory.write('laserTest: ' + data, CommandHistory.STD);
             //console.log('laserTest ' + data);
@@ -336,7 +337,7 @@ class Com extends React.Component {
             this.setComAttrs(comAttrs);
         });
 
-        this.socket.on('qCount', data => {
+        socket.on('qCount', data => {
             this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //console.log('qCount ' + data);
             data = parseInt(data);
@@ -357,7 +358,7 @@ class Com extends React.Component {
             }
         });
 
-        this.socket.on('close', () => {
+        socket.on('close', () => {
             this.setComAttrs({ serverConnecting: false, serverConnected: false, machineConnecting: false, machineConnected: false, serverVersion: 'not connected' });
             this.socket = null;
             CommandHistory.error('Server connection closed')
@@ -365,7 +366,7 @@ class Com extends React.Component {
             //console.log('Server connection closed');
         });
 
-        this.socket.on('error', data => {
+        socket.on('error', data => {
             CommandHistory.error('Server error: ' + data)
             //console.log('error: ' + data);
         });
