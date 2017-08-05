@@ -77,20 +77,22 @@ class Com extends React.Component {
         let server = this.props.settings.comServerIP;
         CommandHistory.write('Connecting to Server @ ' + server, CommandHistory.INFO);
         this.socket = io('ws://' + server);
+        this.setComAttrs({ serverConnecting: true, serverConnected: false, machineConnecting: false, machineConnected: false });
 
         this.socket.on('connect', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             this.socket.emit('getServerConfig');
             CommandHistory.write('Server connected', CommandHistory.SUCCESS);
         });
 
         this.socket.on('disconnect', () => {
             CommandHistory.error('Disconnected from Server ' + server)
-            this.setComAttrs({ serverConnected: false, machineConnected: false });
+            this.setComAttrs({ serverConnecting: false, serverConnected: false, machineConnecting: false, machineConnected: false });
+            this.socket = null;
         });
 
         this.socket.on('serverConfig', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             let serverVersion = data.serverVersion;
             this.setComAttrs({ serverVersion: serverVersion });
             //CommandHistory.write('Server version: ' + serverVersion, CommandHistory.INFO);
@@ -98,7 +100,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('interfaces', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 let interfaces = new Array();
                 for (let i = 0; i < data.length; i++)
@@ -112,7 +114,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('ports', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 let ports = new Array();
                 for (let i = 0; i < data.length; i++) {
@@ -127,7 +129,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('activeInterface', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual interface
             }
@@ -135,7 +137,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('activePort', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual port
             }
@@ -143,7 +145,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('activeBaudRate', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual baudrate
             }
@@ -151,7 +153,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('activeIP', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             if (data.length > 0) {
                 //set the actual machine IP
             }
@@ -160,12 +162,14 @@ class Com extends React.Component {
 
         this.socket.on('connectStatus', data => {
             console.log('connectStatus: ' + data);
-            let comAttrs = { serverConnected: true };
+            let comAttrs = { serverConnecting: false, serverConnected: true };
             if (data.indexOf('opened') >= 0) {
+                comAttrs.machineConnecting = false;
                 comAttrs.machineConnected = true;
                 CommandHistory.write('Machine connected', CommandHistory.SUCCESS);
             }
             if (data.indexOf('Connect') >= 0) {
+                comAttrs.machineConnecting = false;
                 comAttrs.machineConnected = false;
                 CommandHistory.error('Machine disconnected')
             }
@@ -178,7 +182,9 @@ class Com extends React.Component {
             let fVersion = data.version;
             let fDate = data.date;
             let comAttrs = {
+                serverConnecting: false,
                 serverConnected: true,
+                machineConnecting: false,
                 machineConnected: true,
                 firmware: firmware,
                 firmwareVersion: fVersion + '',
@@ -204,7 +210,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('data', data => {
-            let comAttrs = { serverConnected: true, machineConnected: true };
+            let comAttrs = { serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true };
             if (data) {
                 if (data.indexOf('<') === 0) {
                     //CommandHistory.write('statusReport: ' + data);
@@ -231,7 +237,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('wPos', wpos => {
-            let comAttrs = { serverConnected: true, machineConnected: true };
+            let comAttrs = { serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true };
             let { x, y, z, a } = wpos; //let pos = wpos.split(',');
             let posChanged = false;
             if (this.xpos !== x) {
@@ -259,7 +265,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('wOffset', wOffset => {
-            this.setComAttrs({ serverConnected: true, machineConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true });
             let { x, y, z, a } = wOffset;
             x = Number(x)
             y = Number(y)
@@ -291,35 +297,35 @@ class Com extends React.Component {
 
         // feed override report (from server)
         this.socket.on('feedOverride', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('feedOverride: ' + data, CommandHistory.STD);
             //console.log('feedOverride ' + data);
         });
 
         // spindle override report (from server)
         this.socket.on('spindleOverride', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('spindleOverride: ' + data, CommandHistory.STD);
             //console.log('spindleOverride ' + data);
         });
 
         // real feed report (from server)
         this.socket.on('realFeed', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('realFeed: ' + data, CommandHistory.STD);
             //console.log('realFeed ' + data);
         });
 
         // real spindle report (from server)
         this.socket.on('realSpindle', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //CommandHistory.write('realSpindle: ' + data, CommandHistory.STD);
             //console.log('realSpindle ' + data);
         });
 
         // laserTest state
         this.socket.on('laserTest', data => {
-            let comAttrs = { serverConnected: true };
+            let comAttrs = { serverConnecting: false, serverConnected: true };
             //CommandHistory.write('laserTest: ' + data, CommandHistory.STD);
             //console.log('laserTest ' + data);
             if (data > 0) {
@@ -331,7 +337,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('qCount', data => {
-            this.setComAttrs({ serverConnected: true });
+            this.setComAttrs({ serverConnecting: false, serverConnected: true });
             //console.log('qCount ' + data);
             data = parseInt(data);
             if (this.getComAttrs().playing && data === 0) {
@@ -352,12 +358,11 @@ class Com extends React.Component {
         });
 
         this.socket.on('close', () => {
-            this.setComAttrs({ serverConnected: false, machineConnected: false });
+            this.setComAttrs({ serverConnecting: false, serverConnected: false, machineConnecting: false, machineConnected: false, serverVersion: 'not connected' });
+            this.socket = null;
             CommandHistory.error('Server connection closed')
             // websocket is closed.
             //console.log('Server connection closed');
-            let serverVersion = 'not connected';
-            this.setComAttrs({ serverVersion: serverVersion });
         });
 
         this.socket.on('error', data => {
@@ -368,14 +373,22 @@ class Com extends React.Component {
 
     disconnectFromServer() {
         if (this.socket) {
+            this.setComAttrs({ serverConnecting: false, serverConnected: false, machineConnecting: false, machineConnected: false, serverVersion: 'not connected' });
             CommandHistory.write('Disconnecting from server', CommandHistory.INFO);
             this.socket.disconnect();
-            let serverVersion = 'not connected';
-            this.setComAttrs({ serverVersion: serverVersion });
+            this.socket = null;
         }
     }
 
+    toggleConnectToServer() {
+        if (this.socket)
+            this.disconnectFromServer();
+        else
+            this.connectToServer();
+    }
+
     connectToMachine() {
+        console.log(this.props.settings)
         var comConnectVia = this.props.settings.comConnectVia;
         var comConnectPort = this.props.settings.comConnectPort.trim();
         var comConnectBaud = this.props.settings.comConnectBaud;
@@ -392,6 +405,7 @@ class Com extends React.Component {
                 }
                 CommandHistory.write('Connecting Machine @ ' + comConnectVia + ',' + comConnectPort + ',' + comConnectBaud + 'baud', CommandHistory.INFO);
                 this.socket.emit('connectTo', comConnectVia + ',' + comConnectPort + ',' + comConnectBaud);
+                this.setComAttrs({ machineConnecting: true, machineConnected: false });
                 break;
             case 'Telnet':
                 if (!comConnectIP) {
@@ -400,6 +414,7 @@ class Com extends React.Component {
                 }
                 CommandHistory.write('Connecting Machine @ ' + comConnectVia + ',' + comConnectIP, CommandHistory.INFO);
                 this.socket.emit('connectTo', comConnectVia + ',' + comConnectIP);
+                this.setComAttrs({ machineConnecting: true, machineConnected: false });
                 break;
             case 'ESP8266':
                 if (!comConnectIP) {
@@ -408,6 +423,7 @@ class Com extends React.Component {
                 }
                 CommandHistory.write('Connecting Machine @ ' + comConnectVia + ',' + comConnectIP, CommandHistory.INFO);
                 this.socket.emit('connectTo', comConnectVia + ',' + comConnectIP);
+                this.setComAttrs({ machineConnecting: true, machineConnected: false });
                 break;
         }
     } // connectToMachine()
@@ -415,6 +431,16 @@ class Com extends React.Component {
     disconnectFromMachine() {
         CommandHistory.write('Disconnecting Machine', CommandHistory.INFO);
         this.socket.emit('closePort');
+    }
+
+    toggleConnectToMachine() {
+        if (!this.socket)
+            return;
+        let { machineConnecting, machineConnected } = this.getComAttrs();
+        if (machineConnecting || machineConnected)
+            this.disconnectFromMachine();
+        else
+            this.connectToMachine();
     }
 
     setRunStatus(runStatus) {
@@ -637,7 +663,7 @@ export function withComComponent(Component) {
     class Wrapper extends React.Component {
         render() {
             return (
-                <Component {...{ ...this.props, comComponent: this.context.com }} />
+                <Component {...{ ...this.props, comComponent: this.context.comComponent }} />
             );
         }
     };

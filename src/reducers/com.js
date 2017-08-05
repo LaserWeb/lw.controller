@@ -1,7 +1,9 @@
 import { objectNoId } from '../reducers/object'
 
 export const COM_INITIALSTATE = {
+    serverConnecting: false,
     serverConnected: false,
+    machineConnecting: false,
     machineConnected: false,
     serverVersion: 'not connected',
     interfaces: [],
