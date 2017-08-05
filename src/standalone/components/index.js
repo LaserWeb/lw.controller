@@ -1,5 +1,5 @@
 import React from 'react'
-import {Com} from '../../components/com'
+import { Com } from '../../components/com'
 import Controller from '../../components/Controller'
 
 export default function Main() {

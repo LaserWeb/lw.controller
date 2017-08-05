@@ -1,16 +1,11 @@
 import { objectNoId } from '../../reducers/object'
 
 export const SETTINGS_INITIALSTATE = {
-    comServerVersion: 'not connected',
-    comServerIP: 'localhost:8000',
-    comServerConnect: false,
-    comInterfaces: [],
-    comPorts: [],
     comAccumulatedJobTime: 0,
-
+    comServerIP: 'localhost:8000',
     connectVia: '',
     connectPort: '',
-    connectBaud: '115200',
+    connectBaud: 115200,
     connectIP: '',
 }
 

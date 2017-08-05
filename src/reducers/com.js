@@ -1,9 +1,12 @@
 import { objectNoId } from '../reducers/object'
 
 export const COM_INITIALSTATE = {
-    state: '',
     serverConnected: false,
     machineConnected: false,
+    comServerVersion: 'not connected',
+    comInterfaces: [],
+    comPorts: [],
+    state: '',
     playing: false,
     paused: false,
     m0: false,
@@ -11,10 +14,7 @@ export const COM_INITIALSTATE = {
     firmware: '',
     firmwareVersion: '',
     workOffset: [0, 0, 0, 0],
-    wpos: [0, 0, 0],
-
-    comInterfaces: [],
-    comPorts: []
+    wpos: [0, 0, 0, 0],
 }
 
 export function com(state = COM_INITIALSTATE, action) {

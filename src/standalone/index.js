@@ -13,7 +13,7 @@ export const LOCALSTORAGE_KEY = 'lw-controller';
 export const DEBUG_KEY = "lw-controller-debug";
 
 const hot = (state, action) => {
-    return require('./reducers/main.js').default(state, action);
+    return require('./reducers').default(state, action);
 };
 
 const reducer = compose(
@@ -52,7 +52,7 @@ const middleware = compose(
 export const store = createStore(reducer, middleware);
 
 function Hot(props) {
-    const Main = require('./components/main.js').default;
+    const Main = require('./components').default;
     return <Main />;
 }
 
@@ -66,6 +66,6 @@ function renderHot() {
 renderHot();
 
 if (module.hot) {
-    module.hot.accept('./reducers/main.js', renderHot);
-    module.hot.accept('./components/main.js', renderHot);
+    module.hot.accept('./reducers', renderHot);
+    module.hot.accept('./components', renderHot);
 }
