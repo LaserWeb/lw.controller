@@ -92,7 +92,7 @@ class Com extends React.Component {
         this.socket.on('serverConfig', data => {
             this.setComAttrs({ serverConnected: true });
             let serverVersion = data.serverVersion;
-            this.setComAttrs({ comServerVersion: serverVersion });
+            this.setComAttrs({ serverVersion: serverVersion });
             //CommandHistory.write('Server version: ' + serverVersion, CommandHistory.INFO);
             console.log('serverVersion: ' + serverVersion);
         });
@@ -103,7 +103,7 @@ class Com extends React.Component {
                 let interfaces = new Array();
                 for (let i = 0; i < data.length; i++)
                     interfaces.push(data[i]);
-                this.setComAttrs({ comInterfaces: interfaces });
+                this.setComAttrs({ interfaces: interfaces });
                 console.log('interfaces: ' + interfaces);
                 //CommandHistory.write('interfaces: ' + interfaces);
             } else {
@@ -118,7 +118,7 @@ class Com extends React.Component {
                 for (let i = 0; i < data.length; i++) {
                     ports.push(data[i].comName);
                 }
-                this.setComAttrs({ comPorts: ports });
+                this.setComAttrs({ ports: ports });
                 //console.log('ports: ' + ports);
                 CommandHistory.write('Serial ports detected: ' + JSON.stringify(ports));
             } else {
@@ -357,7 +357,7 @@ class Com extends React.Component {
             // websocket is closed.
             //console.log('Server connection closed');
             let serverVersion = 'not connected';
-            this.setComAttrs({ comServerVersion: serverVersion });
+            this.setComAttrs({ serverVersion: serverVersion });
         });
 
         this.socket.on('error', data => {
@@ -371,43 +371,43 @@ class Com extends React.Component {
             CommandHistory.write('Disconnecting from server', CommandHistory.INFO);
             this.socket.disconnect();
             let serverVersion = 'not connected';
-            this.setComAttrs({ comServerVersion: serverVersion });
+            this.setComAttrs({ serverVersion: serverVersion });
         }
     }
 
     connectToMachine() {
-        var connectVia = this.props.settings.connectVia;
-        var connectPort = this.props.settings.connectPort.trim();
-        var connectBaud = this.props.settings.connectBaud;
-        var connectIP = this.props.settings.connectIP;
-        switch (connectVia) {
+        var comConnectVia = this.props.settings.comConnectVia;
+        var comConnectPort = this.props.settings.comConnectPort.trim();
+        var comConnectBaud = this.props.settings.comConnectBaud;
+        var comConnectIP = this.props.settings.comConnectIP;
+        switch (comConnectVia) {
             case 'USB':
-                if (!connectPort) {
+                if (!comConnectPort) {
                     CommandHistory.write('Could not connect! -> please select port', CommandHistory.DANGER);
                     break;
                 }
-                if (!connectBaud) {
+                if (!comConnectBaud) {
                     CommandHistory.write('Could not connect! -> please select baudrate', CommandHistory.DANGER);
                     break;
                 }
-                CommandHistory.write('Connecting Machine @ ' + connectVia + ',' + connectPort + ',' + connectBaud + 'baud', CommandHistory.INFO);
-                this.socket.emit('connectTo', connectVia + ',' + connectPort + ',' + connectBaud);
+                CommandHistory.write('Connecting Machine @ ' + comConnectVia + ',' + comConnectPort + ',' + comConnectBaud + 'baud', CommandHistory.INFO);
+                this.socket.emit('connectTo', comConnectVia + ',' + comConnectPort + ',' + comConnectBaud);
                 break;
             case 'Telnet':
-                if (!connectIP) {
+                if (!comConnectIP) {
                     CommandHistory.write('Could not connect! -> please enter IP address', CommandHistory.DANGER);
                     break;
                 }
-                CommandHistory.write('Connecting Machine @ ' + connectVia + ',' + connectIP, CommandHistory.INFO);
-                this.socket.emit('connectTo', connectVia + ',' + connectIP);
+                CommandHistory.write('Connecting Machine @ ' + comConnectVia + ',' + comConnectIP, CommandHistory.INFO);
+                this.socket.emit('connectTo', comConnectVia + ',' + comConnectIP);
                 break;
             case 'ESP8266':
-                if (!connectIP) {
+                if (!comConnectIP) {
                     CommandHistory.write('Could not connect! -> please enter IP address', CommandHistory.DANGER);
                     break;
                 }
-                CommandHistory.write('Connecting Machine @ ' + connectVia + ',' + connectIP, CommandHistory.INFO);
-                this.socket.emit('connectTo', connectVia + ',' + connectIP);
+                CommandHistory.write('Connecting Machine @ ' + comConnectVia + ',' + comConnectIP, CommandHistory.INFO);
+                this.socket.emit('connectTo', comConnectVia + ',' + comConnectIP);
                 break;
         }
     } // connectToMachine()
