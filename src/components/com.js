@@ -199,32 +199,8 @@ class Com extends React.Component {
             //setGcode(data);
         });
 
-        this.socket.on('runStatus', status => {
-            //CommandHistory.write('runStatus: ' + status);
-            console.log('runStatus: ' + status);
-            let comAttrs = {};
-            if (status === 'running') {
-                comAttrs.playing = true;
-                comAttrs.paused = false;
-            } else if (status === 'paused') {
-                comAttrs.paused = true;
-            } else if (status === 'm0') {
-                comAttrs.paused = true;
-                comAttrs.m0 = true;
-            } else if (status === 'resumed') {
-                comAttrs.paused = false;
-            } else if (status === 'stopped') {
-                comAttrs.playing = false;
-                comAttrs.paused = false;
-            } else if (status === 'finished') {
-                comAttrs.playing = false;
-                comAttrs.paused = false;
-            } else if (status === 'alarm') {
-                CommandHistory.error('ALARM!')
-                //this.socket.emit('clearAlarm', 2);
-            }
-            //!!! runStatus(status);
-            this.setComAttrs(comAttrs);
+        this.socket.on('runStatus', runStatus => {
+            this.setRunStatus(runStatus);
         });
 
         this.socket.on('data', data => {
@@ -237,8 +213,8 @@ class Com extends React.Component {
                     // till GRBL v0.9: <Idle,MPos:0.000,0.000,0.000,WPos:0.000,0.000,0.000>
                     // since GRBL v1.1: <Idle|WPos:0.000,0.000,0.000|Bf:15,128|FS:0,0|Pn:S|WCO:0.000,0.000,0.000> (when $10=2)
 
-                    // Extract state
-                    comAttrs.state = data.substring(data.indexOf('<') + 1, data.search(/(,|\|)/));
+                    // Extract machineStatus
+                    comAttrs.machineStatus = data.substring(data.indexOf('<') + 1, data.search(/(,|\|)/));
                 } else {
                     let style = CommandHistory.STD;
                     if (data.indexOf('[MSG:') === 0) {
@@ -359,9 +335,7 @@ class Com extends React.Component {
             //console.log('qCount ' + data);
             data = parseInt(data);
             if (this.getComAttrs().playing && data === 0) {
-                this.setComAttrs({ playing: false, paused: false, m0: false });
-                //!!! runStatus('stopped');
-
+                this.setRunStatus('stopped');
                 if (this.jobStartTime >= 0) {
                     let jobFinishTime = new Date(Date.now());
                     let elapsedTimeMS = jobFinishTime.getTime() - this.jobStartTime.getTime();
@@ -443,6 +417,30 @@ class Com extends React.Component {
         this.socket.emit('closePort');
     }
 
+    setRunStatus(runStatus) {
+        //CommandHistory.write('runStatus: ' + runStatus);
+        console.log('runStatus: ' + runStatus);
+        if (runStatus === 'running') {
+            this.setComAttrs({ runStatus, playing: true, paused: false, m0: false, });
+        } else if (runStatus === 'paused') {
+            this.setComAttrs({ runStatus, playing: true, paused: true, m0: false, });
+        } else if (runStatus === 'm0') {
+            this.setComAttrs({ runStatus, playing: true, paused: true, m0: true, });
+        } else if (runStatus === 'resumed') {
+            this.setComAttrs({ runStatus, playing: true, paused: false, m0: false, });
+        } else if (runStatus === 'stopped') {
+            this.setComAttrs({ runStatus, playing: false, paused: false, m0: false, });
+        } else if (runStatus === 'finished') {
+            this.setComAttrs({ runStatus, playing: false, paused: false, m0: false, });
+        } else if (runStatus === 'alarm') {
+            CommandHistory.error('ALARM!')
+            this.setComAttrs({ runStatus, playing: false, paused: false, m0: false, });
+            //this.socket.emit('clearAlarm', 2);
+        } else {
+            this.setComAttrs({ runStatus });
+        }
+    }
+
     checkConnected() {
         let { serverConnected, machineConnected } = this.getComAttrs();
         if (serverConnected)
@@ -470,8 +468,7 @@ class Com extends React.Component {
             return;
         if (job.length > 0) {
             CommandHistory.write('Running Job', CommandHistory.INFO);
-            this.setComAttrs({ playing: true });
-            //!!! runStatus('running');
+            this.setRunStatus('running');
             this.jobStartTime = new Date(Date.now());
             this.socket.emit('runJob', job);
         } else {
@@ -483,8 +480,7 @@ class Com extends React.Component {
         console.log('pauseJob');
         if (!checkConnected())
             return;
-        this.setComAttrs({ paused: true });
-        //!!! runStatus('paused');
+        this.setRunStatus('paused');
         this.socket.emit('pause');
     }
 
@@ -492,8 +488,7 @@ class Com extends React.Component {
         console.log('resumeJob');
         if (!checkConnected())
             return;
-        this.setComAttrs({ paused: false, m0: false });
-        //!!! runStatus('running');
+        this.setRunStatus('running');
         this.socket.emit('resume');
     }
 
@@ -502,8 +497,7 @@ class Com extends React.Component {
         if (!checkConnected())
             return;
         CommandHistory.write('Aborting job', CommandHistory.INFO);
-        this.setComAttrs({ playing: false, paused: false, m0: false });
-        //!!! runStatus('stopped');
+        this.setRunStatus('stopped');
         this.socket.emit('stop');
     }
 
@@ -604,8 +598,7 @@ class Com extends React.Component {
                     laseroncmd = 0;
                 }
                 this.socket.emit('resume', laseroncmd);
-                this.setComAttrs({ paused: false });
-                // !!! runStatus('running');
+                this.setRunStatus('running');
                 // end ifPaused
             } else {
                 // pause
@@ -614,8 +607,7 @@ class Com extends React.Component {
                     laseroffcmd = 0;
                 }
                 this.socket.emit('pause', laseroffcmd);
-                this.setComAttrs({ paused: true });
-                // !!! runStatus('paused');
+                this.setRunStatus('paused');
             }
             // end isPlaying
         } else {
