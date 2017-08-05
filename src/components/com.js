@@ -39,10 +39,15 @@ class Com extends React.Component {
     }
 
     componentDidMount() {
-        this.handleConnectServer();
+        this.connectToServer();
     }
 
     componentWillUnmount() {
+        this.disconnectFromServer();
+    }
+
+    getComAttrs() {
+        return store.getState().com;
     }
 
     setComAttrs(attrs) {
@@ -65,7 +70,7 @@ class Com extends React.Component {
         }
     }
 
-    handleConnectServer() {
+    connectToServer() {
         let server = this.props.settings.comServerIP;
         CommandHistory.write('Connecting to Server @ ' + server, CommandHistory.INFO);
         this.socket = io('ws://' + server);
@@ -167,7 +172,7 @@ class Com extends React.Component {
         });
 
         this.socket.on('firmware', data => {
-            console.log('firmware: ' + data);
+            console.log('firmware: ' + JSON.stringify(data));
             let firmware = data.firmware;
             let fVersion = data.version;
             let fDate = data.date;
@@ -196,36 +201,43 @@ class Com extends React.Component {
         this.socket.on('runStatus', status => {
             //CommandHistory.write('runStatus: ' + status);
             console.log('runStatus: ' + status);
+            let attrs = {};
             if (status === 'running') {
-                this.playing = true;
-                this.paused = false;
+                attrs.playing = true;
+                attrs.paused = false;
             } else if (status === 'paused') {
-                this.paused = true;
+                attrs.paused = true;
             } else if (status === 'm0') {
-                this.paused = true;
-                this.m0 = true;
+                attrs.paused = true;
+                attrs.m0 = true;
             } else if (status === 'resumed') {
-                this.paused = false;
+                attrs.paused = false;
             } else if (status === 'stopped') {
-                this.playing = false;
-                this.paused = false;
+                attrs.playing = false;
+                attrs.paused = false;
             } else if (status === 'finished') {
-                this.playing = false;
-                this.paused = false;
+                attrs.playing = false;
+                attrs.paused = false;
             } else if (status === 'alarm') {
                 CommandHistory.error('ALARM!')
                 //this.socket.emit('clearAlarm', 2);
             }
-            this.setComAttrs({ playing: this.playing, paused: this.paused });
             //!!! runStatus(status);
+            this.setComAttrs(attrs);
         });
 
         this.socket.on('data', data => {
-            this.setComAttrs({ serverConnected: true, machineConnected: true });
+            let attrs = { serverConnected: true, machineConnected: true };
             if (data) {
                 if (data.indexOf('<') === 0) {
                     //CommandHistory.write('statusReport: ' + data);
-                    //!!! updateStatus(data);
+
+                    // Smoothieware: <Idle,MPos:49.5756,279.7644,-15.0000,WPos:0.0000,0.0000,0.0000>
+                    // till GRBL v0.9: <Idle,MPos:0.000,0.000,0.000,WPos:0.000,0.000,0.000>
+                    // since GRBL v1.1: <Idle|WPos:0.000,0.000,0.000|Bf:15,128|FS:0,0|Pn:S|WCO:0.000,0.000,0.000> (when $10=2)
+
+                    // Extract state
+                    attrs.state = data.substring(data.indexOf('<') + 1, data.search(/(,|\|)/));
                 } else {
                     let style = CommandHistory.STD;
                     if (data.indexOf('[MSG:') === 0) {
@@ -238,6 +250,7 @@ class Com extends React.Component {
                     CommandHistory.write(data, style);
                 }
             }
+            this.setComAttrs(attrs);
         });
 
         this.socket.on('wPos', wpos => {
@@ -342,10 +355,8 @@ class Com extends React.Component {
             this.setComAttrs({ serverConnected: true });
             //console.log('qCount ' + data);
             data = parseInt(data);
-            if (this.playing && data === 0) {
-                this.playing = false;
-                this.paused = false;
-                this.setComAttrs({ playing: this.playing, paused: this.paused });
+            if (this.getComAttrs().playing && data === 0) {
+                this.setComAttrs({ playing: false, paused: false, m0: false });
                 //!!! runStatus('stopped');
 
                 if (jobStartTime >= 0) {
@@ -377,9 +388,9 @@ class Com extends React.Component {
             CommandHistory.error('Server error: ' + data)
             //console.log('error: ' + data);
         });
-    } // handleConnectServer()
+    } // connectToServer()
 
-    handleDisconnectServer() {
+    disconnectFromServer() {
         if (this.socket) {
             CommandHistory.write('Disconnecting from server', CommandHistory.INFO);
             this.socket.disconnect();
@@ -388,7 +399,7 @@ class Com extends React.Component {
         }
     }
 
-    handleConnectMachine() {
+    connectToMachine() {
         var connectVia = this.props.settings.connectVia;
         var connectPort = this.props.settings.connectPort.trim();
         var connectBaud = this.props.settings.connectBaud;
@@ -423,12 +434,192 @@ class Com extends React.Component {
                 this.socket.emit('connectTo', connectVia + ',' + connectIP);
                 break;
         }
-    }
+    } // connectToMachine()
 
-    handleDisconnectMachine() {
+    disconnectFromMachine() {
         CommandHistory.write('Disconnecting Machine', CommandHistory.INFO);
         this.socket.emit('closePort');
     }
+
+    checkConnected() {
+        let { serverConnected, machineConnected } = this.getComAttrs();
+        if (serverConnected)
+            if (machineConnected)
+                return true;
+            else
+                CommandHistory.error('Machine is not connected!')
+        else
+            CommandHistory.error('Server is not connected!')
+        return false;
+    }
+
+    runCommand(gcode) {
+        if (!checkConnected())
+            return;
+        if (gcode) {
+            //CommandHistory.write('Running Command', CommandHistory.INFO);
+            //console.log('runCommand', gcode);
+            socket.emit('runCommand', gcode);
+        }
+    }
+
+    runJob(job) {
+        if (!checkConnected())
+            return;
+        if (job.length > 0) {
+            CommandHistory.write('Running Job', CommandHistory.INFO);
+            this.setComAttrs({ playing: true });
+            //!!! runStatus('running');
+            jobStartTime = new Date(Date.now());
+            socket.emit('runJob', job);
+        } else {
+            CommandHistory.error('Job empty!')
+        }
+    }
+
+    pauseJob() {
+        console.log('pauseJob');
+        if (!checkConnected())
+            return;
+        this.setComAttrs({ paused: true });
+        //!!! runStatus('paused');
+        socket.emit('pause');
+    }
+
+    resumeJob() {
+        console.log('resumeJob');
+        if (!checkConnected())
+            return;
+        this.setComAttrs({ paused: false, m0: false });
+        //!!! runStatus('running');
+        socket.emit('resume');
+    }
+
+    abortJob() {
+        console.log('abortJob');
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Aborting job', CommandHistory.INFO);
+        this.setComAttrs({ playing: false, paused: false, m0: false });
+        //!!! runStatus('stopped');
+        socket.emit('stop');
+    }
+
+    clearAlarm(method) {
+        console.log('clearAlarm');
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Resetting alarm', CommandHistory.INFO);
+        socket.emit('clearAlarm', method);
+    }
+
+    setZero(axis) {
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Set ' + axis + ' Axis zero', CommandHistory.INFO);
+        socket.emit('setZero', axis);
+    }
+
+    gotoZero(axis) {
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Goto ' + axis + ' zero', CommandHistory.INFO);
+        socket.emit('gotoZero', axis);
+    }
+
+    setPosition(data) {
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Set position to ' + JSON.stringify(data), CommandHistory.INFO);
+        socket.emit('setPosition', data);
+    }
+
+    home(axis) {
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Home ' + axis, CommandHistory.INFO);
+        socket.emit('home', axis);
+    }
+
+    probe(axis, offset) {
+        if (!checkConnected())
+            return;
+        CommandHistory.write('Probe ' + axis + ' (Offset:' + offset + ')', CommandHistory.INFO);
+        socket.emit('probe', { axis: axis, offset: offset });
+    }
+
+    laserTest(power, duration, maxS) {
+        if (!checkConnected())
+            return;
+        console.log('laserTest(' + power + ', ' + duration + ', ' + maxS + ')');
+        socket.emit('laserTest', power + ',' + duration + ',' + maxS);
+    }
+
+    jog(axis, dist, feed) {
+        if (!checkConnected())
+            return;
+        //console.log('jog(' + axis + ',' + dist + ',' + feed + ')');
+        socket.emit('jog', axis + ',' + dist + ',' + feed);
+    }
+
+    jogTo(x, y, z, mode, feed) {
+        if (!checkConnected())
+            return;
+        //console.log('jog(' + axis + ',' + dist + ',' + feed + ')');
+        socket.emit('jogTo', { x: x, y: y, z: z, mode: mode, feed: feed });
+    }
+
+    feedOverride(step) {
+        if (!checkConnected())
+            return;
+        console.log('feedOverride ' + step);
+        socket.emit('feedOverride', step);
+    }
+
+    spindleOverride(step) {
+        if (!checkConnected())
+            return;
+        console.log('spindleOverride ' + step);
+        socket.emit('spindleOverride', step);
+    }
+
+    resetMachine() {
+        if (!checkConnected())
+            return;
+        CommandHistory.error('Resetting Machine')
+        socket.emit('resetMachine');
+    }
+
+    playpauseMachine() {
+        if (!checkConnected())
+            return;
+        let { playing, paused } = this.getComAttrs();
+        if (playing === true) {
+            if (paused === true) {
+                // unpause
+                var laseroncmd = document.getElementById('laseron').value;
+                if (laseroncmd.length === 0) {
+                    laseroncmd = 0;
+                }
+                socket.emit('resume', laseroncmd);
+                this.setComAttrs({ paused: false });
+                // !!! runStatus('running');
+                // end ifPaused
+            } else {
+                // pause
+                var laseroffcmd = document.getElementById('laseroff').value;
+                if (laseroffcmd.length === 0) {
+                    laseroffcmd = 0;
+                }
+                socket.emit('pause', laseroffcmd);
+                this.setComAttrs({ paused: true });
+                // !!! runStatus('paused');
+            }
+            // end isPlaying
+        } else {
+            playGcode();
+        }
+    } // playpauseMachine()
 
     render() {
         let { settings, com, dispatch, children, ...rest } = this.props;
