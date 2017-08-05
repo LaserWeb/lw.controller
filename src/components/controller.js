@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
+
+import { StringInput, NumberInput, SelectInput, Field } from './fields';
+import { withComComponent } from './com';
 
 const fields = {
     foo: { type: 'input', props: { type: 'number', step: 'any' } },
 };
 
-export default class Controller extends React.Component {
+class Controller extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -55,6 +59,32 @@ export default class Controller extends React.Component {
         window.removeEventListener("message", this.receiveMessage, false);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (nextState.elements.length && (this.settings !== nextProps.settings || this.com !== nextProps.com)) {
+            this.settings = nextProps.settings;
+            this.com = nextProps.com;
+            let values = {
+                ...this.settings, ...this.com,
+                workOffsetX: this.com.workOffset[0],
+                workOffsetY: this.com.workOffset[1],
+                workOffsetZ: this.com.workOffset[2],
+                workOffsetA: this.com.workOffset[3],
+                wposX: this.com.wpos[0],
+                wposY: this.com.wpos[1],
+                wposZ: this.com.wpos[2],
+                wposA: this.com.wpos[3],
+                mposX: this.com.wpos[0] + this.com.workOffset[0],
+                mposY: this.com.wpos[1] + this.com.workOffset[1],
+                mposZ: this.com.wpos[2] + this.com.workOffset[2],
+                mposA: this.com.wpos[3] + this.com.workOffset[3],
+            };
+            this.iframe.contentWindow.postMessage({ type: 'setValues', values }, '*');
+        }
+        if (nextState !== this.state)
+            return true;
+        return false;
+    }
+
     componentWillUpdate(nextProps, nextState) {
         let { width, height, contentWidth, contentHeight } = nextState;
         let transform = '';
@@ -100,3 +130,7 @@ export default class Controller extends React.Component {
             </div>);
     }
 } // Controller
+Controller = connect(
+    ({ settings, com }) => ({ settings, com }),
+)(withComComponent(Controller));
+export default Controller;
