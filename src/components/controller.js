@@ -111,11 +111,11 @@ class Controller extends React.Component {
 
         for (let elem of elements) {
             if (elem.type === 'field') {
-                let { left, top, width, height, fontSize } = elem;
+                let { left, top, width, height, font } = elem;
                 let field = fields[elem.field] || { type: 'input', props: { value: "unrecognized", readOnly: true } };
                 controls.push(<field.type
                     key={elem.id} {...field.props}
-                    style={{ position: 'absolute', left, top, width, height, fontSize }} />);
+                    style={{ position: 'absolute', left, top, width, height, font }} />);
             }
         }
 

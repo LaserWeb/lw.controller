@@ -50,6 +50,12 @@ JSON object with the following attributes:
         <td>type-field
         <td>Creates a field on top of element
     <tr>
+        <td>font
+        <td>any
+        <td>{"font":"bold 10mm sans"}
+        <td>
+        <td>Font on field
+    <tr>
         <td>action
         <td>any
         <td>{"action":"jog-configured-distance"}
