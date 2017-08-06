@@ -5,11 +5,11 @@ import ConnectionBar from '../../components/connection-bar'
 
 export default function Main() {
     return (
-        <Com>
-            <ConnectionBar />
-            <div style={{ border: '20px solid green', position: 'relative', width: '80%', height: '80%', overflow: 'visible' }}>
+        <Com style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}>
+            <ConnectionBar style={{ flex: '0 0' }} />
+            <div style={{ flex: '1 1', border: '20px solid green', position: 'relative', overflow: 'visible' }}>
                 <Controller />
             </div>
-        </Com>
+        </Com >
     );
 }

@@ -651,7 +651,6 @@ class Com extends React.Component {
         let { settings, com, dispatch, children, ...rest } = this.props;
         return (
             < div {...rest }>
-                {JSON.stringify(com)}
                 {children}
             </div >
         );
