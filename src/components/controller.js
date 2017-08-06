@@ -49,7 +49,7 @@ class Controller extends React.Component {
                 });
             else if (e.data.type === 'ackSetTransform' && this.state.visibility !== 'visible')
                 this.setState({ visibility: 'visible' });
-            //console.log(e.data);
+            console.log(e.data);
         };
         window.addEventListener("message", this.receiveMessage, false);
     }
@@ -61,22 +61,30 @@ class Controller extends React.Component {
 
     shouldComponentUpdate(nextProps, nextState) {
         if (nextState.elements.length && (this.settings !== nextProps.settings || this.com !== nextProps.com)) {
-            this.settings = nextProps.settings;
-            this.com = nextProps.com;
+            let settings = this.settings = nextProps.settings;
+            let com = this.com = nextProps.com;
+            let locked = !com.serverConnected || !com.machineConnected || com.alarm;
             let values = {
-                ...this.settings, ...this.com,
-                workOffsetX: this.com.workOffset[0],
-                workOffsetY: this.com.workOffset[1],
-                workOffsetZ: this.com.workOffset[2],
-                workOffsetA: this.com.workOffset[3],
-                wposX: this.com.wpos[0],
-                wposY: this.com.wpos[1],
-                wposZ: this.com.wpos[2],
-                wposA: this.com.wpos[3],
-                mposX: this.com.wpos[0] + this.com.workOffset[0],
-                mposY: this.com.wpos[1] + this.com.workOffset[1],
-                mposZ: this.com.wpos[2] + this.com.workOffset[2],
-                mposA: this.com.wpos[3] + this.com.workOffset[3],
+                ...settings, ...com,
+                workOffsetX: com.workOffset[0],
+                workOffsetY: com.workOffset[1],
+                workOffsetZ: com.workOffset[2],
+                workOffsetA: com.workOffset[3],
+                wposX: com.wpos[0],
+                wposY: com.wpos[1],
+                wposZ: com.wpos[2],
+                wposA: com.wpos[3],
+                mposX: com.wpos[0] + com.workOffset[0],
+                mposY: com.wpos[1] + com.workOffset[1],
+                mposZ: com.wpos[2] + com.workOffset[2],
+                mposA: com.wpos[3] + com.workOffset[3],
+                'enable-home-all': !locked && !com.playing,
+                'enable-run-job': !locked && (!com.playing || com.paused),
+                'enable-pause-job': !locked && com.playing && !com.paused,
+                'enable-abort-job': !locked && com.playing,
+                'enable-clear-alarm': com.serverConnected && com.machineConnected && com.alarm,
+                'enable-set-zero': !locked && (!com.playing || com.m0),
+                'enable-check-size': !locked && !com.playing,
             };
             this.iframe.contentWindow.postMessage({ type: 'setValues', values }, '*');
         }
