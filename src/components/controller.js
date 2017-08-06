@@ -9,6 +9,16 @@ const fields = {
     foo: { type: 'input', props: { type: 'number', step: 'any' } },
 };
 
+const buttons = {
+    'home-all': { click(controller, { comComponent, settings }) { console.log('home-all'); comComponent.runCommand(settings.gcodeHoming) } },
+    'run-job': { click(controller, { comComponent }) { console.log('run-job'); comComponent.runJob() } },
+    'pause-job': { click(controller, { comComponent }) { console.log('pause-job'); comComponent.pauseJob() } },
+    'abort-job': { click(controller, { comComponent }) { console.log('abort-job'); comComponent.abortJob() } },
+    'clear-alarm': { click(controller, { comComponent }) { console.log('clear-alarm'); comComponent.clearAlarm() } },
+    'set-zero': { click(controller, { comComponent }) { console.log('set-zero'); comComponent.setZero() } },
+    'check-size': { click(controller, { comComponent }) { console.log('check-size'); comComponent.checkSize() } },
+};
+
 class Controller extends React.Component {
     constructor() {
         super();
@@ -21,6 +31,7 @@ class Controller extends React.Component {
             visibility: 'hidden'
         };
         this.transform = '';
+        this.buttons = {};
     }
 
     componentDidMount() {
@@ -49,6 +60,14 @@ class Controller extends React.Component {
                 });
             else if (e.data.type === 'ackSetTransform' && this.state.visibility !== 'visible')
                 this.setState({ visibility: 'visible' });
+            else if (e.data.type === 'mouse') {
+                let button = this.buttons[e.data.id];
+                if (button) {
+                    let event = button[e.data.event];
+                    if (event)
+                        event(this, this.props, e.data);
+                }
+            }
             console.log(e.data);
         };
         window.addEventListener("message", this.receiveMessage, false);
@@ -78,7 +97,7 @@ class Controller extends React.Component {
                 mposY: com.wpos[1] + com.workOffset[1],
                 mposZ: com.wpos[2] + com.workOffset[2],
                 mposA: com.wpos[3] + com.workOffset[3],
-                'enable-home-all': !locked && !com.playing,
+                'enable-home-all': !locked && !com.playing && settings.gcodeHoming !== '',
                 'enable-run-job': !locked && (!com.playing || com.paused),
                 'enable-pause-job': !locked && com.playing && !com.paused,
                 'enable-abort-job': !locked && com.playing,
@@ -116,6 +135,9 @@ class Controller extends React.Component {
                 controls.push(<field.type
                     key={elem.id} {...field.props}
                     style={{ position: 'absolute', left, top, width, height, font }} />);
+            } else if (elem.type === 'button') {
+                if (buttons[elem.action])
+                    this.buttons[elem.id] = buttons[elem.action];
             }
         }
 

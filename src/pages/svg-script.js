@@ -60,22 +60,24 @@ window.addEventListener("message", receiveMessage, false);
 
 svg.addEventListener("mousedown", e => e.preventDefault());
 
-function click(e) {
-    let msg = { type: 'click', id: e.target.id };
-    window.parent.postMessage(msg, '*');
+function mouse(name) {
+    return e => {
+        e.preventDefault();
+        e.stopPropagation();
+        let msg = { type: 'mouse', event: name, buttons: e.buttons, id: e.currentTarget.id };
+        window.parent.postMessage(msg, '*');
+    };
 }
 
-function mousedown(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    let msg = { type: 'mousedown', id: e.target.id };
-    window.parent.postMessage(msg, '*');
-}
-
-function mouseup(e) {
-    let msg = { type: 'mouseup', id: e.target.id };
-    window.parent.postMessage(msg, '*');
-}
+let mousedown = mouse('mousedown');
+let mouseup = mouse('mouseup');
+let mousemove = mouse('mousemove');
+let click = mouse('click');
+let dblclick = mouse('dblclick');
+let mouseover = mouse('mouseover');
+let mouseout = mouse('mouseout');
+let mouseenter = mouse('mouseenter');
+let mouseleave = mouse('mouseleave');
 
 for (let elem of document.getElementsByTagName("*")) {
     let { left, top, width, height } = elem.getBoundingClientRect();
@@ -100,9 +102,15 @@ for (let elem of document.getElementsByTagName("*")) {
                 indicators[desc.indicator] = [elem];
         }
         if (desc.type === 'button') {
-            elem.onclick = click;
             elem.onmousedown = mousedown;
             elem.onmouseup = mouseup;
+            elem.onmousemove = mousemove;
+            elem.onclick = click;
+            elem.ondblclick = dblclick;
+            elem.onmouseover = mouseover;
+            elem.onmouseout = mouseout;
+            elem.onmouseenter = mouseenter;
+            elem.onmouseleave = mouseleave;
         }
         if ('type' in desc)
             elements.push(desc);

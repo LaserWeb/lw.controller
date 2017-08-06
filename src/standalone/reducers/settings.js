@@ -7,6 +7,7 @@ export const SETTINGS_INITIALSTATE = {
     comConnectPort: '',
     comConnectBaud: 115200,
     comConnectIP: '',
+    gcodeHoming: '$H',
 };
 
 export const settings = (state, action) => {

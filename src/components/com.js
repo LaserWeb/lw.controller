@@ -486,7 +486,7 @@ class Com extends React.Component {
     }
 
     runCommand(gcode) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         if (gcode) {
             //CommandHistory.write('Running Command', CommandHistory.INFO);
@@ -496,7 +496,7 @@ class Com extends React.Component {
     }
 
     runJob(job) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         if (job.length > 0) {
             CommandHistory.write('Running Job', CommandHistory.INFO);
@@ -510,7 +510,7 @@ class Com extends React.Component {
 
     pauseJob() {
         console.log('pauseJob');
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         this.setRunStatus('paused');
         this.socket.emit('pause');
@@ -518,7 +518,7 @@ class Com extends React.Component {
 
     resumeJob() {
         console.log('resumeJob');
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         this.setRunStatus('running');
         this.socket.emit('resume');
@@ -526,7 +526,7 @@ class Com extends React.Component {
 
     abortJob() {
         console.log('abortJob');
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Aborting job', CommandHistory.INFO);
         this.setRunStatus('stopped');
@@ -535,91 +535,91 @@ class Com extends React.Component {
 
     clearAlarm(method) {
         console.log('clearAlarm');
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Resetting alarm', CommandHistory.INFO);
         this.socket.emit('clearAlarm', method);
     }
 
     setZero(axis) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Set ' + axis + ' Axis zero', CommandHistory.INFO);
         this.socket.emit('setZero', axis);
     }
 
     gotoZero(axis) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Goto ' + axis + ' zero', CommandHistory.INFO);
         this.socket.emit('gotoZero', axis);
     }
 
     setPosition(data) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Set position to ' + JSON.stringify(data), CommandHistory.INFO);
         this.socket.emit('setPosition', data);
     }
 
     home(axis) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Home ' + axis, CommandHistory.INFO);
         this.socket.emit('home', axis);
     }
 
     probe(axis, offset) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.write('Probe ' + axis + ' (Offset:' + offset + ')', CommandHistory.INFO);
         this.socket.emit('probe', { axis: axis, offset: offset });
     }
 
     laserTest(power, duration, maxS) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         console.log('laserTest(' + power + ', ' + duration + ', ' + maxS + ')');
         this.socket.emit('laserTest', power + ',' + duration + ',' + maxS);
     }
 
     jog(axis, dist, feed) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         //console.log('jog(' + axis + ',' + dist + ',' + feed + ')');
         this.socket.emit('jog', axis + ',' + dist + ',' + feed);
     }
 
     jogTo(x, y, z, mode, feed) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         //console.log('jog(' + axis + ',' + dist + ',' + feed + ')');
         this.socket.emit('jogTo', { x: x, y: y, z: z, mode: mode, feed: feed });
     }
 
     feedOverride(step) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         console.log('feedOverride ' + step);
         this.socket.emit('feedOverride', step);
     }
 
     spindleOverride(step) {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         console.log('spindleOverride ' + step);
         this.socket.emit('spindleOverride', step);
     }
 
     resetMachine() {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         CommandHistory.error('Resetting Machine')
         this.socket.emit('resetMachine');
     }
 
     playpauseMachine() {
-        if (!checkConnected())
+        if (!this.checkConnected())
             return;
         let { playing, paused } = this.getComAttrs();
         if (playing === true) {
