@@ -30,9 +30,9 @@
      objecttolerance="10"
      pagecolor="#ffffff"
      showgrid="true"
-     inkscape:current-layer="layer1"
-     inkscape:cx="653.1847"
-     inkscape:cy="296.30072"
+     inkscape:current-layer="g1980"
+     inkscape:cx="1340.9979"
+     inkscape:cy="520.50103"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -41,7 +41,7 @@
      inkscape:window-width="2489"
      inkscape:window-x="1067"
      inkscape:window-y="124"
-     inkscape:zoom="1"
+     inkscape:zoom="4"
      units="mm"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="true"
@@ -49,7 +49,7 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-others="false"
      showguides="false"
-     inkscape:snap-grids="false"
+     inkscape:snap-grids="true"
      inkscape:snap-to-guides="false">
     <inkscape:grid
        id="grid186"
@@ -69,7 +69,7 @@
         <dc:format>                    image/svg+xml                </dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -83,7 +83,11 @@
         .action-jog-configured-distance.index-1 {fill:#00ffff} 
         .action-jog-configured-distance.index-2 {fill:#00c0ff} 
         .action-jog-configured-distance.index-3 {fill:#0080ff} 
-        .type-button:hover {fill:#ff0000} 
+        .type-button:hover {fill:#ff0000}
+        .control-button .background {fill:#00ffff}
+        .control-button .border {fill:none}
+        .control-button:hover .border {fill:#0000ff}
+        .control-button-disabled-background {fill:#00c0c0}
         .debug {fill:#00ff00}
         ]]></style>
   <g
@@ -1540,38 +1544,50 @@
        id="g4928"
        transform="translate(-6.0830799,4.9391791)">
       <path
+         inkscape:label="{&quot;classes&quot;:[&quot;control-button-disabled-background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          inkscape:connector-curvature="0"
          id="rect1548-64-2-1"
          d="M 268.08256,-42.961338 V -6.96095 h 35.99987 v -36.000388 z"
          style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
+         inkscape:label="{&quot;classes&quot;:[&quot;control-button-disabled-background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          inkscape:connector-curvature="0"
          id="rect1548-64-2-7"
          d="M 232.08269,-42.961338 V -6.96095 h 35.99987 v -36.000388 z"
          style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
+         inkscape:label="{&quot;classes&quot;:[&quot;control-button-disabled-background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          inkscape:connector-curvature="0"
          id="rect1548-64-2-33"
          d="M 196.08282,-42.961338 V -6.96095 h 35.99987 v -36.000388 z"
          style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
+         inkscape:label="{&quot;classes&quot;:[&quot;control-button-disabled-background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          inkscape:connector-curvature="0"
          id="rect1548-64-2-3"
          d="M 160.08295,-42.961338 V -6.96095 h 35.99987 v -36.000388 z"
          style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
+         inkscape:label="{&quot;classes&quot;:[&quot;control-button-disabled-background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          inkscape:connector-curvature="0"
          id="rect1548-64-2-9"
          d="M 124.08308,-42.961338 V -6.96095 h 35.99987 v -36.000388 z"
          style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;run-job&quot;,&quot;indicator&quot;:&quot;enable-run-job&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;run-job&quot;,&quot;indicator&quot;:&quot;enable-run-job&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-60.166373,203.22737)"
          id="g1989">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-162"
+           id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1533"
@@ -1605,13 +1621,20 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;pause-job&quot;,&quot;indicator&quot;:&quot;enable-pause-job&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;pause-job&quot;,&quot;indicator&quot;:&quot;enable-pause-job&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-60.166373,203.22737)"
          id="g1980">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
            id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1506"
@@ -1644,13 +1667,20 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;clear-alarm&quot;,&quot;indicator&quot;:&quot;enable-clear-alarm&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;clear-alarm&quot;,&quot;indicator&quot;:&quot;enable-clear-alarm&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-24.166503,203.22737)"
          id="g1971">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-12"
+           id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1513"
@@ -1683,13 +1713,20 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;home-all&quot;,&quot;indicator&quot;:&quot;enable-home-all&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;home-all&quot;,&quot;indicator&quot;:&quot;enable-home-all&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-96.166243,203.22737)"
          id="g1962">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-25"
+           id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1546"
@@ -1722,13 +1759,20 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;abort-job&quot;,&quot;indicator&quot;:&quot;enable-abort-job&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;abort-job&quot;,&quot;indicator&quot;:&quot;enable-abort-job&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-24.166503,203.22737)"
          id="g1953">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-27"
+           id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1520"
@@ -1763,13 +1807,20 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;check-size&quot;,&quot;indicator&quot;:&quot;enable-check-size&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;check-size&quot;,&quot;indicator&quot;:&quot;enable-check-size&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(47.833237,203.22737)"
          id="g1997">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-64"
+           id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1526"
@@ -1797,13 +1848,20 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-zero&quot;,&quot;indicator&quot;:&quot;enable-set-zero&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-zero&quot;,&quot;indicator&quot;:&quot;enable-set-zero&quot;,&quot;classes&quot;:[&quot;control-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(11.833367,203.22737)"
          id="g1944">
         <path
+           inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-270"
+           id="rect1548-29"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+           style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
+           id="rect1548-29-9"
            inkscape:connector-curvature="0" />
         <g
            id="g1539"
