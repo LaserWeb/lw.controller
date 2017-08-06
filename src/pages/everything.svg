@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
+<?xml-stylesheet type="text/css" href="everything.css" ?><svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg1"
@@ -30,9 +31,9 @@
      objecttolerance="10"
      pagecolor="#ffffff"
      showgrid="true"
-     inkscape:current-layer="g1980"
-     inkscape:cx="1340.9979"
-     inkscape:cy="520.50103"
+     inkscape:current-layer="g4928"
+     inkscape:cx="956.38324"
+     inkscape:cy="390.76731"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -41,7 +42,7 @@
      inkscape:window-width="2489"
      inkscape:window-x="1067"
      inkscape:window-y="124"
-     inkscape:zoom="4"
+     inkscape:zoom="1.4142136"
      units="mm"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="true"
@@ -73,23 +74,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <style
-     id="style4"
-     type="text/css"><![CDATA[
-        * {cursor:default; user-select:none}
-        .nomouse {pointer-events:none}
-        .true .hide-true, .true.hide-true {visibility:hidden}
-        .false .hide-false, .false.hide-false {visibility:hidden}
-        .action-jog-configured-distance.index-1 {fill:#00ffff} 
-        .action-jog-configured-distance.index-2 {fill:#00c0ff} 
-        .action-jog-configured-distance.index-3 {fill:#0080ff} 
-        .type-button:hover {fill:#ff0000}
-        .control-button .background {fill:#00ffff}
-        .control-button .border {fill:none}
-        .control-button:hover .border {fill:#0000ff}
-        .control-button-disabled-background {fill:#00c0c0}
-        .debug {fill:#00ff00}
-        ]]></style>
   <g
      inkscape:groupmode="layer"
      id="layer1"
@@ -1628,13 +1612,13 @@
            inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-29"
+           id="path5088"
            inkscape:connector-curvature="0" />
         <path
            inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
-           id="rect1548-29-9"
+           id="path5090"
            inkscape:connector-curvature="0" />
         <g
            id="g1506"
@@ -1674,13 +1658,13 @@
            inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-29"
+           id="path5099"
            inkscape:connector-curvature="0" />
         <path
            inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
-           id="rect1548-29-9"
+           id="path5101"
            inkscape:connector-curvature="0" />
         <g
            id="g1513"
@@ -1720,13 +1704,13 @@
            inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-29"
+           id="path5110"
            inkscape:connector-curvature="0" />
         <path
            inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
-           id="rect1548-29-9"
+           id="path5112"
            inkscape:connector-curvature="0" />
         <g
            id="g1546"
@@ -1766,13 +1750,13 @@
            inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-29"
+           id="path5121"
            inkscape:connector-curvature="0" />
         <path
            inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
-           id="rect1548-29-9"
+           id="path5123"
            inkscape:connector-curvature="0" />
         <g
            id="g1520"
@@ -1814,13 +1798,13 @@
            inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-29"
+           id="path5132"
            inkscape:connector-curvature="0" />
         <path
            inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
-           id="rect1548-29-9"
+           id="path5134"
            inkscape:connector-curvature="0" />
         <g
            id="g1526"
@@ -1855,13 +1839,13 @@
            inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.26141834;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.24932,-246.18871 v 36.00039 h 35.99987 v -36.00039 z"
-           id="rect1548-29"
+           id="path5142"
            inkscape:connector-curvature="0" />
         <path
            inkscape:label="{&quot;classes&quot;:[&quot;border&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
            style="display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            d="m 220.26406,-246.21316 v 36.00039 h 35.99987 v -36.00039 z m 1.50019,1.49965 h 33.00005 v 33.00006 h -33.00005 z"
-           id="rect1548-29-9"
+           id="path5144"
            inkscape:connector-curvature="0" />
         <g
            id="g1539"
@@ -1891,107 +1875,6 @@
     </g>
   </g>
   <script
-     id="script688"><![CDATA[
-        let svg = document.getElementById('svg1');
-        let elements = [];
-        let indicators = {};
-
-        function receiveMessage(e) {
-            if (e.source !== window.parent)
-                return;
-            if (e.data.type === 'setTransform') {
-                svg.style.transform = e.data.transform;
-                window.parent.postMessage({ type: 'ackSetTransform' }, '*');
-            } else if (e.data.type === 'setValues') {
-                for (let attr in e.data.values) {
-                    let ind = indicators[attr];
-                    if (ind) {
-                        for (let elem of ind) {
-                            let value = e.data.values[attr];
-                            if (elem.tagName === 'text') {
-                                if (Number.isNaN(value))
-                                    elem.children[0].textContent = '    NaN';
-                                else if (typeof value === 'number')
-                                    elem.children[0].textContent = (value < 0 ? '-' : ' ') + ('0000' + Math.abs(value).toFixed(2)).slice(-6);
-                                else
-                                    elem.children[0].textContent = value + '';
-                            }
-                            if (value === true) {
-                                elem.classList.add('true');
-                                elem.classList.remove('false');
-                            } else if (value === false) {
-                                elem.classList.remove('true');
-                                elem.classList.add('false');
-                            }
-                        }
-                    }
-                }
-            }
-        };
-        window.addEventListener("message", this.receiveMessage, false);
-
-        svg.addEventListener("mousedown", e => e.preventDefault());
-
-        function click(e) {
-            let msg = { type: 'click', id: e.target.id };
-            window.parent.postMessage(msg, '*');
-        }
-
-        function mousedown(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            let msg = { type: 'mousedown', id: e.target.id };
-            window.parent.postMessage(msg, '*');
-        }
-
-        function mouseup(e) {
-            let msg = { type: 'mouseup', id: e.target.id };
-            window.parent.postMessage(msg, '*');
-        }
-
-        for (let elem of document.getElementsByTagName("*")) {
-            let { left, top, width, height } = elem.getBoundingClientRect();
-            let label = elem.getAttribute('inkscape:label');
-            if (!label || label[0] !== '{')
-                continue;
-            let desc;
-            try {
-                desc = { ...JSON.parse(label), left, top, width, height, id: elem.id };
-                if (desc.classes)
-                    elem.classList.add(...desc.classes);
-                for (let attr of ['type', 'action', 'axis', 'index', 'negative'])
-                    if (attr in desc)
-                        elem.classList.add(attr + '-' + desc[attr]);
-                if (desc['remove-styles'])
-                    for (let s of desc['remove-styles'])
-                        elem.style.removeProperty(s);
-                if (desc.indicator) {
-                    if (desc.indicator in indicators)
-                        indicators[desc.indicator].push(elem);
-                    else
-                        indicators[desc.indicator] = [elem];
-                }
-                if (desc.type === 'button') {
-                    elem.onclick = click;
-                    elem.onmousedown = mousedown;
-                    elem.onmouseup = mouseup;
-                }
-                if ('type' in desc)
-                    elements.push(desc);
-            } catch (e) {
-                console.error('error parsing inkscape:label:', label)
-            }
-        }
-
-        svg.width.baseVal.convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_PX);
-        let width = svg.width.baseVal.valueInSpecifiedUnits;
-        svg.height.baseVal.convertToSpecifiedUnits(SVGLength.SVG_LENGTHTYPE_PX);
-        let height = svg.height.baseVal.valueInSpecifiedUnits;
-
-        let loadedMsg = {
-            type: 'loaded',
-            width, height, elements,
-        };
-        window.parent.postMessage(loadedMsg, '*');
-  ]]></script>
+     xlink:href="svg-script.js"
+     id="script688" />
 </svg>
