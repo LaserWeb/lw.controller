@@ -187,12 +187,12 @@
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          d="m 16.893101,69.03815 7.071,7.071 a 40,40 0 0 1 56.56874,1e-5 l 7.071,-7.071 a 50.000001,50.000001 0 0 0 -70.71074,-1e-5 z"
          id="rect4024-15-98" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          y="54.393448"
          x="112.24863"
          height="10"
@@ -200,7 +200,7 @@
          id="rect4959" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          y="64.393433"
          x="112.24863"
          height="10"
@@ -208,7 +208,7 @@
          id="rect4961" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          y="74.393448"
          x="112.24863"
          height="10"
@@ -216,7 +216,7 @@
          id="rect4963" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          y="54.393478"
          x="142.24861"
          height="10"
@@ -224,7 +224,7 @@
          id="rect4959-6" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          y="64.393448"
          x="142.24861"
          height="10"
@@ -232,7 +232,7 @@
          id="rect4961-3" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          y="74.393478"
          x="142.24861"
          height="10"
@@ -241,36 +241,36 @@
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          d="m 66.390841,90.25115 a 20,20 0 0 1 1e-5,28.28474 l 7.071,7.071 a 30.000001,30.000001 0 0 0 -10e-6,-42.42674 z"
          id="rect4024-15" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          d="m 73.461841,83.18015 a 30.000001,30.000001 0 0 1 10e-6,42.42674 l 7.071,7.071 a 40,40 0 0 0 1e-5,-56.56875 z"
          id="rect4024-15-9" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          d="m 80.532861,76.10914 a 40,40 0 0 1 -3.7e-4,56.56839 l 7.07135,7.07136 a 50.000001,50.000001 0 0 0 2e-5,-70.71075 z"
          id="rect4024-15-7" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          d="m 31.035471,83.18051 7.071,7.07101 a 20,20 0 0 1 28.28437,-3.7e-4 l 7.071,-7.071 a 30.000001,30.000001 0 0 0 -42.42637,3.6e-4 z"
          id="rect4024-15-3" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          d="m 23.964471,76.10951 7.07137,7.07137 a 30.000001,30.000001 0 0 1 42.426,-7.3e-4 l 7.071,-7.07099 a 40,40 0 0 0 -56.56837,3.5e-4 z"
          id="rect4024-15-5" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          y="144.39343"
          x="112.24863"
          height="10"
@@ -278,7 +278,7 @@
          id="rect4965" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          y="134.39343"
          x="112.24863"
          height="10"
@@ -286,7 +286,7 @@
          id="rect4967" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          y="124.39345"
          x="112.24863"
          height="10"
@@ -294,7 +294,7 @@
          id="rect4969" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          y="144.39346"
          x="142.24861"
          height="10"
@@ -302,7 +302,7 @@
          id="rect4965-4" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          y="134.39346"
          x="142.24861"
          height="10"
@@ -310,7 +310,7 @@
          id="rect4967-2" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          y="124.39348"
          x="142.24861"
          height="10"
@@ -319,37 +319,37 @@
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          d="m 31.035471,83.18051 a 30.000001,30.000001 0 0 0 10e-6,42.426 l 7.071,-7.071 a 20,20 0 0 1 -1e-5,-28.28399 z"
          id="rect4024-4" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          d="m 23.964471,76.10951 a 40,40 0 0 0 -3.6e-4,56.56838 l 7.071,-7.071 a 30.000001,30.000001 0 0 1 7.3e-4,-42.42601 z"
          id="rect4024-44" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          d="m 16.893101,69.03815 a 50.000001,50.000001 0 0 0 10e-6,70.71074 l 7.071,-7.071 a 40,40 0 0 1 -10e-6,-56.56874 z"
          id="rect4024-7" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          d="m 31.035841,125.60616 a 30.000001,30.000001 0 0 0 42.42601,7.3e-4 l -7.071,-7.071 a 20,20 0 0 1 -28.28401,-7.3e-4 z"
          id="rect4024" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          d="m 23.964471,132.67752 a 40,40 0 0 0 56.56838,3.7e-4 l -7.071,-7.071 a 30.000001,30.000001 0 0 1 -42.42637,-3.8e-4 z"
          id="rect4024-5" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          d="m 16.893471,139.74852 a 50.000001,50.000001 0 0 0 70.71037,3.7e-4 l -7.07135,-7.07136 a 40,40 0 0 1 -56.56802,-1e-5 z"
          id="rect4024-1" />
       <rect
@@ -1565,7 +1565,7 @@
          d="M 124.08308,-42.961338 V -6.96095 h 35.99987 v -36.000388 z"
          style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:11.2614193;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;run-job&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;run-job&quot;,&quot;indicator&quot;:&quot;enable-run-job&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-60.166373,203.22737)"
          id="g1989">
         <path
@@ -1605,7 +1605,7 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;pause-job&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;pause-job&quot;,&quot;indicator&quot;:&quot;enable-pause-job&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-60.166373,203.22737)"
          id="g1980">
         <path
@@ -1644,7 +1644,7 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;clear-alarm&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;clear-alarm&quot;,&quot;indicator&quot;:&quot;enable-clear-alarm&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-24.166503,203.22737)"
          id="g1971">
         <path
@@ -1683,7 +1683,7 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;home-all&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;home-all&quot;,&quot;indicator&quot;:&quot;enable-home-all&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-96.166243,203.22737)"
          id="g1962">
         <path
@@ -1722,7 +1722,7 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;abort-job&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;abort-job&quot;,&quot;indicator&quot;:&quot;enable-abort-job&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(-24.166503,203.22737)"
          id="g1953">
         <path
@@ -1763,7 +1763,7 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;check-size&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;check-size&quot;,&quot;indicator&quot;:&quot;enable-check-size&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(47.833237,203.22737)"
          id="g1997">
         <path
@@ -1797,7 +1797,7 @@
         </g>
       </g>
       <g
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-zero&quot;,&quot;classes&quot;:[&quot;hide-false&quot;]}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-zero&quot;,&quot;indicator&quot;:&quot;enable-set-zero&quot;,&quot;classes&quot;:[&quot;main-button&quot;,&quot;hide-false&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
          transform="translate(11.833367,203.22737)"
          id="g1944">
         <path
@@ -1849,27 +1849,22 @@
                     let ind = indicators[attr];
                     if (ind) {
                         for (let elem of ind) {
-
                             let value = e.data.values[attr];
                             if (elem.tagName === 'text') {
                                 if (Number.isNaN(value))
                                     elem.children[0].textContent = '    NaN';
                                 else if (typeof value === 'number')
                                     elem.children[0].textContent = (value < 0 ? '-' : ' ') + ('0000' + Math.abs(value).toFixed(2)).slice(-6);
-
-
-
-
                                 else
                                     elem.children[0].textContent = value + '';
-                            } else if (value === true) {
+                            }
+                            if (value === true) {
                                 elem.classList.add('true');
                                 elem.classList.remove('false');
                             } else if (value === false) {
                                 elem.classList.remove('true');
                                 elem.classList.add('false');
                             }
-
                         }
                     }
                 }
@@ -1878,13 +1873,6 @@
         window.addEventListener("message", this.receiveMessage, false);
 
         svg.addEventListener("mousedown", e => e.preventDefault());
-
-        function getClasses(target) {
-            let classes = [];
-            for (let c of target.classList)
-                classes.push(c);
-            return classes;
-        }
 
         function click(e) {
             let msg = { type: 'click', id: e.target.id };
@@ -1916,8 +1904,9 @@
                 for (let attr of ['type', 'action', 'axis', 'index', 'negative'])
                     if (attr in desc)
                         elem.classList.add(attr + '-' + desc[attr]);
-                if (desc.type === 'button' && !desc.indicator)
-                    desc.indicator = 'enable-' + desc.action;
+                if (desc['remove-styles'])
+                    for (let s of desc['remove-styles'])
+                        elem.style.removeProperty(s);
                 if (desc.indicator) {
                     if (desc.indicator in indicators)
                         indicators[desc.indicator].push(elem);
@@ -1925,7 +1914,6 @@
                         indicators[desc.indicator] = [elem];
                 }
                 if (desc.type === 'button') {
-                    elem.style.fill = null;
                     elem.onclick = click;
                     elem.onmousedown = mousedown;
                     elem.onmouseup = mouseup;
