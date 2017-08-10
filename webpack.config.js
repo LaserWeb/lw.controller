@@ -7,7 +7,7 @@ var dist_path = path.resolve('./dist');
 module.exports = {
     context: src_path,
     entry: [
-        'webpack-dev-server/client?http://0.0.0.0:8080', 'webpack/hot/only-dev-server', 'babel-polyfill', './standalone/index.js',
+        'webpack-dev-server/client?http://0.0.0.0:8081', 'webpack/hot/only-dev-server', 'babel-polyfill', './standalone/index.js',
         'file-loader?name=index.html!./standalone/index.html',
         'file-loader?name=everything.svg!./pages/everything.svg',
         'file-loader?name=everything.css!./pages/everything.css',
@@ -40,6 +40,7 @@ module.exports = {
         quiet: false,
         noInfo: false,
         disableHostCheck: false,
+        port: 8081,
         host: 'localhost'
     },
     devtool: 'source-map'

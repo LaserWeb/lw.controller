@@ -4,14 +4,17 @@ import { connect } from 'react-redux';
 
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
 import { withComComponent } from './com';
+import { setGcode } from '../standalone/actions/gcode';
 
-const fields = {
-    foo: { type: 'input', props: { type: 'number', step: 'any' } },
+function getFields(controller) {
+    return {
+        'open-gcode': { type: 'input', style: { opacity: 0 }, props: { type: 'file', accept: '.gcode', value: '', onChange: e => controller.loadGcode(e) } },
+    };
 };
 
 const buttons = {
     'home-all': { click(controller, { comComponent, settings }) { comComponent.runCommand(settings.gcodeHoming) } },
-    'run-job': { click(controller, { comComponent }) { console.log('!!!run-job'); } },
+    'run-job': { click(controller, { comComponent }) { comComponent.runJob(controller.gcode.content) } },
     'pause-job': { click(controller, { comComponent }) { comComponent.pauseJob() } },
     'resume-job': { click(controller, { comComponent }) { comComponent.resumeJob() } },
     'abort-job': { click(controller, { comComponent }) { comComponent.abortJob() } },
@@ -69,7 +72,7 @@ class Controller extends React.Component {
                         event(this, this.props, e.data);
                 }
             }
-            console.log(e.data);
+            // console.log(e.data);
         };
         window.addEventListener("message", this.receiveMessage, false);
     }
@@ -80,9 +83,10 @@ class Controller extends React.Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        if (nextState.elements.length && (this.settings !== nextProps.settings || this.com !== nextProps.com)) {
+        if (nextState.elements.length && (this.settings !== nextProps.settings || this.com !== nextProps.com || this.gcode !== nextProps.gcode)) {
             let settings = this.settings = nextProps.settings;
             let com = this.com = nextProps.com;
+            let gcode = this.gcode = nextProps.gcode;
             let locked = !com.serverConnected || !com.machineConnected || com.alarm;
             let values = {
                 ...settings, ...com,
@@ -98,8 +102,9 @@ class Controller extends React.Component {
                 mposY: com.wpos[1] + com.workOffset[1],
                 mposZ: com.wpos[2] + com.workOffset[2],
                 mposA: com.wpos[3] + com.workOffset[3],
+                'gcodeLoaded': gcode.content.length > 0,
                 'enable-home-all': !locked && !com.playing && settings.gcodeHoming !== '',
-                'enable-run-job': !locked && !com.playing,
+                'enable-run-job': !locked && !com.playing && gcode.content.length > 0,
                 'enable-pause-job': !locked && com.playing && !com.paused,
                 'enable-resume-job': !locked && com.playing && com.paused,
                 'enable-abort-job': !locked && com.playing,
@@ -129,14 +134,17 @@ class Controller extends React.Component {
     render() {
         let { width, height, contentWidth, contentHeight, elements } = this.state;
         let controls = [];
+        let fields = getFields(this);
 
         for (let elem of elements) {
             if (elem.type === 'field') {
-                let { left, top, width, height, font } = elem;
-                let field = fields[elem.field] || { type: 'input', props: { value: "unrecognized", readOnly: true } };
+                console.log(elem)
+                let { name, left, top, width, height, font } = elem;
+                console.log({ left, top, width, height, font })
+                let field = fields[name] || { type: 'input', props: { value: "unrecognized", readOnly: true } };
                 controls.push(<field.type
                     key={elem.id} {...field.props}
-                    style={{ position: 'absolute', left, top, width, height, font }} />);
+                    style={{ position: 'absolute', left, top, width, height, font, ...field.style }} />);
             } else if (elem.type === 'button') {
                 if (buttons[elem.action])
                     this.buttons[elem.id] = buttons[elem.action];
@@ -161,8 +169,16 @@ class Controller extends React.Component {
                 </div>
             </div>);
     }
+
+    loadGcode(e) {
+        for (let file of e.target.files) {
+            let reader = new FileReader;
+            reader.onload = () => this.props.dispatch(setGcode(reader.result));
+            reader.readAsText(file);
+        }
+    }
 } // Controller
 Controller = connect(
-    ({ settings, com }) => ({ settings, com }),
+    ({ settings, com, gcode }) => ({ settings, com, gcode }),
 )(withComComponent(Controller));
 export default Controller;
