@@ -31,18 +31,18 @@
     fill: #00c0c0
 }
 
-.action-jog-configured-distance.index-1 {
+.action-jog.index-1 {
     fill: #00ffff
 }
 
-.action-jog-configured-distance.index-2 {
+.action-jog.index-2 {
     fill: #00c0ff
 }
 
-.action-jog-configured-distance.index-3 {
+.action-jog.index-3 {
     fill: #0080ff
 }
 
-.type-button:hover {
+.action-jog:hover {
     fill: #ff0000
 }

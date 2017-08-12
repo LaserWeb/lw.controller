@@ -10,9 +10,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg1"
    width="405.20532mm"
-   height="181.79697mm"
+   height="212.03864mm"
    version="1.1"
-   viewBox="0 0 405.20532 181.79697"
+   viewBox="0 0 405.20532 212.03864"
    inkscape:version="0.92.1 r15371"
    style="overflow:hidden"
    sodipodi:docname="everything.svg">
@@ -31,9 +31,9 @@
      objecttolerance="10"
      pagecolor="#ffffff"
      showgrid="true"
-     inkscape:current-layer="g2372"
-     inkscape:cx="660.4382"
-     inkscape:cy="631.31535"
+     inkscape:current-layer="g181"
+     inkscape:cx="492.66828"
+     inkscape:cy="197.3736"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -42,7 +42,7 @@
      inkscape:window-width="2489"
      inkscape:window-x="1067"
      inkscape:window-y="124"
-     inkscape:zoom="0.70710678"
+     inkscape:zoom="1.4142136"
      units="mm"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="true"
@@ -51,12 +51,19 @@
      inkscape:snap-others="false"
      showguides="false"
      inkscape:snap-grids="false"
-     inkscape:snap-to-guides="false">
+     inkscape:snap-to-guides="false"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-midpoints="false">
     <inkscape:grid
        id="grid186"
        empspacing="2"
-       originx="3.2052965"
-       originy="15.75833"
+       originx="3.2052966"
+       originy="46"
        spacingx="0.25000001"
        spacingy="0.25000001"
        type="xygrid"
@@ -172,15 +179,48 @@
        style="overflow:hidden"
        id="g181"
        transform="translate(3.4389896e-7,-24.637915)">
+      <rect
+         style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:8.94499588;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5466"
+         width="20.000004"
+         height="30.058271"
+         x="112.24863"
+         y="54.393448" />
+      <rect
+         style="display:inline;overflow:hidden;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:8.94499588;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5466-6"
+         width="20.000004"
+         height="30.05827"
+         x="142.24861"
+         y="54.393478" />
+      <rect
+         style="display:inline;overflow:hidden;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:8.94499588;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5466-4"
+         width="20.000004"
+         height="30.05827"
+         x="112.24863"
+         y="124.39345" />
+      <rect
+         style="display:inline;overflow:hidden;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:8.94499588;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5466-8"
+         width="20.000004"
+         height="30.05827"
+         x="142.24861"
+         y="124.39348" />
+      <path
+         style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:47.90033722;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 206.0293 262.86133 A 189.91552 189.91479 0 0 0 16.115234 452.77539 A 189.91552 189.91479 0 0 0 206.0293 642.69141 A 189.91552 189.91479 0 0 0 395.94531 452.77539 A 189.91552 189.91479 0 0 0 206.0293 262.86133 z M 206.03125 377.18555 A 75.590486 75.590234 0 0 1 281.62109 452.77539 A 75.590486 75.590234 0 0 1 206.03125 528.36523 A 75.590486 75.590234 0 0 1 130.44141 452.77539 A 75.590486 75.590234 0 0 1 206.03125 377.18555 z "
+         transform="matrix(0.26458333,0,0,0.26458333,-2.2636234,-15.403581)"
+         id="path5461" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          d="m 16.893101,69.03815 7.071,7.071 a 40,40 0 0 1 56.56874,1e-5 l 7.071,-7.071 a 50.000001,50.000001 0 0 0 -70.71074,-1e-5 z"
          id="rect4024-15-98" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          y="54.393448"
          x="112.24863"
          height="10"
@@ -188,7 +228,7 @@
          id="rect4959" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          y="64.393433"
          x="112.24863"
          height="10"
@@ -196,7 +236,7 @@
          id="rect4961" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          y="74.393448"
          x="112.24863"
          height="10"
@@ -204,7 +244,7 @@
          id="rect4963" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          y="54.393478"
          x="142.24861"
          height="10"
@@ -212,7 +252,7 @@
          id="rect4959-6" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          y="64.393448"
          x="142.24861"
          height="10"
@@ -220,7 +260,7 @@
          id="rect4961-3" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          y="74.393478"
          x="142.24861"
          height="10"
@@ -229,36 +269,36 @@
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          d="m 66.390841,90.25115 a 20,20 0 0 1 1e-5,28.28474 l 7.071,7.071 a 30.000001,30.000001 0 0 0 -10e-6,-42.42674 z"
          id="rect4024-15" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          d="m 73.461841,83.18015 a 30.000001,30.000001 0 0 1 10e-6,42.42674 l 7.071,7.071 a 40,40 0 0 0 1e-5,-56.56875 z"
          id="rect4024-15-9" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:false}"
          d="m 80.532861,76.10914 a 40,40 0 0 1 -3.7e-4,56.56839 l 7.07135,7.07136 a 50.000001,50.000001 0 0 0 2e-5,-70.71075 z"
          id="rect4024-15-7" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:false}"
          d="m 31.035471,83.18051 7.071,7.07101 a 20,20 0 0 1 28.28437,-3.7e-4 l 7.071,-7.071 a 30.000001,30.000001 0 0 0 -42.42637,3.6e-4 z"
          id="rect4024-15-3" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:false}"
          d="m 23.964471,76.10951 7.07137,7.07137 a 30.000001,30.000001 0 0 1 42.426,-7.3e-4 l 7.071,-7.07099 a 40,40 0 0 0 -56.56837,3.5e-4 z"
          id="rect4024-15-5" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          y="144.39343"
          x="112.24863"
          height="10"
@@ -266,7 +306,7 @@
          id="rect4965" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          y="134.39343"
          x="112.24863"
          height="10"
@@ -274,7 +314,7 @@
          id="rect4967" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;z&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          y="124.39345"
          x="112.24863"
          height="10"
@@ -282,7 +322,7 @@
          id="rect4969" />
       <rect
          style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          y="144.39346"
          x="142.24861"
          height="10"
@@ -290,7 +330,7 @@
          id="rect4965-4" />
       <rect
          style="fill:#00c0ff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          y="134.39346"
          x="142.24861"
          height="10"
@@ -298,7 +338,7 @@
          id="rect4967-2" />
       <rect
          style="fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.70710677;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;a&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          y="124.39348"
          x="142.24861"
          height="10"
@@ -307,37 +347,37 @@
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          d="m 31.035471,83.18051 a 30.000001,30.000001 0 0 0 10e-6,42.426 l 7.071,-7.071 a 20,20 0 0 1 -1e-5,-28.28399 z"
          id="rect4024-4" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          d="m 23.964471,76.10951 a 40,40 0 0 0 -3.6e-4,56.56838 l 7.071,-7.071 a 30.000001,30.000001 0 0 1 7.3e-4,-42.42601 z"
          id="rect4024-44" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;x&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          d="m 16.893101,69.03815 a 50.000001,50.000001 0 0 0 10e-6,70.71074 l 7.071,-7.071 a 40,40 0 0 1 -10e-6,-56.56874 z"
          id="rect4024-7" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:1,&quot;negative&quot;:true}"
          d="m 31.035841,125.60616 a 30.000001,30.000001 0 0 0 42.42601,7.3e-4 l -7.071,-7.071 a 20,20 0 0 1 -28.28401,-7.3e-4 z"
          id="rect4024" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#00c0ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:2,&quot;negative&quot;:true}"
          d="m 23.964471,132.67752 a 40,40 0 0 0 56.56838,3.7e-4 l -7.071,-7.071 a 30.000001,30.000001 0 0 1 -42.42637,-3.8e-4 z"
          id="rect4024-5" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog-configured-distance&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
+         inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;],&quot;action&quot;:&quot;jog&quot;,&quot;indicator&quot;:&quot;enable-jog&quot;,&quot;classes&quot;:[&quot;hide-false&quot;],&quot;axis&quot;:&quot;y&quot;,&quot;index&quot;:3,&quot;negative&quot;:true}"
          d="m 16.893471,139.74852 a 50.000001,50.000001 0 0 0 70.71037,3.7e-4 l -7.07135,-7.07136 a 40,40 0 0 1 -56.56802,-1e-5 z"
          id="rect4024-1" />
       <rect
@@ -1345,6 +1385,137 @@
         </g>
       </g>
     </g>
+    <rect
+       id="rect5039-25-9-7-3"
+       width="16"
+       height="5.9999943"
+       x="28.941673"
+       y="147.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog1Dist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-7"
+       width="17.999998"
+       height="5.9999943"
+       x="48.941677"
+       y="147.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog1Feed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-6"
+       width="16"
+       height="5.9999943"
+       x="28.941675"
+       y="155.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog2Dist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-7-4"
+       width="17.999998"
+       height="5.9999943"
+       x="48.941677"
+       y="155.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog2Feed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-0"
+       width="16"
+       height="5.9999943"
+       x="28.941673"
+       y="163.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog3Dist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-7-3"
+       width="17.999998"
+       height="5.9999943"
+       x="48.941677"
+       y="163.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog3Feed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="152.12277"
+       x="15.850723"
+       id="text4977-4"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="152.12277"
+         x="15.850723"
+         id="tspan4975-52">Jog 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="160.12277"
+       x="15.850723"
+       id="text4977-4-5"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="160.12277"
+         x="15.850723"
+         id="tspan4975-52-2">Jog 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="168.13907"
+       x="15.944931"
+       id="text4977-4-8"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="168.13907"
+         x="15.944931"
+         id="tspan4975-52-9">Jog 3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="145.93306"
+       x="28.528263"
+       id="text4977-4-80"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="145.93306"
+         x="28.528263"
+         id="tspan4975-52-7">Distance</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="145.93306"
+       x="48.528263"
+       id="text4977-4-9"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="145.93306"
+         x="48.528263"
+         id="tspan4975-52-4">Feed</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="152.21349"
+       x="68.559273"
+       id="text4977-4-9-6"
+       inkscape:label="{&quot;indicator&quot;:&quot;toolFeedUnits&quot;}"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="152.21349"
+         x="68.559273"
+         id="tspan4975-52-4-5">mm/?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="160.21349"
+       x="68.559273"
+       id="text4977-4-9-6-1"
+       inkscape:label="{&quot;indicator&quot;:&quot;toolFeedUnits&quot;}"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="160.21349"
+         x="68.559273"
+         id="tspan4975-52-4-5-4">mm/?</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="168.21349"
+       x="68.559273"
+       id="text4977-4-9-6-14"
+       inkscape:label="{&quot;indicator&quot;:&quot;toolFeedUnits&quot;}"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="168.21349"
+         x="68.559273"
+         id="tspan4975-52-4-5-8">mm/?</tspan></text>
   </g>
   <script
      xlink:href="svg-script.js"

@@ -4,11 +4,31 @@ import { connect } from 'react-redux';
 
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
 import { withComComponent } from './com';
+import { setComAttrs } from '../actions/com';
 import { setGcode } from '../standalone/actions/gcode';
+import { setSettingsAttrs } from '../standalone/actions/settings';
+
+function adjustFeed(settings, feed) {
+    if (settings.toolFeedUnits === 'mm/s')
+        return feed * 60;
+    else
+        return feed;
+}
+
+function numberSetting(name, settings, dispatch) {
+    return { type: Field, props: { Input: NumberInput, attrs: settings, setAttrs: setSettingsAttrs, name, dispatch } }
+}
 
 function getFields(controller) {
+    let { settings, dispatch } = controller.props;
     return {
         'open-gcode': { type: 'input', style: { opacity: 0 }, props: { type: 'file', accept: '.gcode', value: '', onChange: e => controller.loadGcode(e) } },
+        'ctlJog1Dist': numberSetting('ctlJog1Dist', settings, dispatch),
+        'ctlJog2Dist': numberSetting('ctlJog2Dist', settings, dispatch),
+        'ctlJog3Dist': numberSetting('ctlJog3Dist', settings, dispatch),
+        'ctlJog1Feed': numberSetting('ctlJog1Feed', settings, dispatch),
+        'ctlJog2Feed': numberSetting('ctlJog2Feed', settings, dispatch),
+        'ctlJog3Feed': numberSetting('ctlJog3Feed', settings, dispatch),
     };
 };
 
@@ -21,6 +41,14 @@ const buttons = {
     'clear-alarm': { click(controller, { comComponent }) { comComponent.clearAlarm(2) } },
     'set-zero': { click(controller, { comComponent }) { comComponent.setZero('all') } },
     'check-size': { click(controller, { comComponent }) { console.log('!!!check-size'); } },
+    'jog': {
+        click(controller, { comComponent, settings }, { }, { axis, index, negative }) {
+            comComponent.jog(
+                axis,
+                settings['ctlJog' + index + 'Dist'] * (negative ? -1 : 1),
+                adjustFeed(settings, settings['ctlJog' + index + 'Feed']))
+        }
+    }
 };
 
 class Controller extends React.Component {
@@ -67,9 +95,9 @@ class Controller extends React.Component {
             else if (e.data.type === 'mouse') {
                 let button = this.buttons[e.data.id];
                 if (button) {
-                    let event = button[e.data.event];
+                    let event = button.button[e.data.event];
                     if (event)
-                        event(this, this.props, e.data);
+                        event(this, this.props, e.data, button.elem);
                 }
             }
             // console.log(e.data);
@@ -111,8 +139,10 @@ class Controller extends React.Component {
                 'enable-clear-alarm': com.serverConnected && com.machineConnected && com.alarm,
                 'enable-set-zero': !locked && (!com.playing || com.m0),
                 'enable-check-size': !locked && !com.playing,
+                'enable-jog': !locked && (!com.playing || com.m0),
             };
             this.iframe.contentWindow.postMessage({ type: 'setValues', values }, '*');
+            return true;
         }
         if (nextState !== this.state)
             return true;
@@ -138,16 +168,14 @@ class Controller extends React.Component {
 
         for (let elem of elements) {
             if (elem.type === 'field') {
-                console.log(elem)
                 let { name, left, top, width, height, font } = elem;
-                console.log({ left, top, width, height, font })
                 let field = fields[name] || { type: 'input', props: { value: "unrecognized", readOnly: true } };
                 controls.push(<field.type
                     key={elem.id} {...field.props}
                     style={{ position: 'absolute', left, top, width, height, font, ...field.style }} />);
             } else if (elem.type === 'button') {
                 if (buttons[elem.action])
-                    this.buttons[elem.id] = buttons[elem.action];
+                    this.buttons[elem.id] = { elem, button: buttons[elem.action] };
             }
         }
 
