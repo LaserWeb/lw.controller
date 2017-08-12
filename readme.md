@@ -113,3 +113,11 @@ JSON object with the following members:
 ## Fields
 
 ## Buttons
+
+## Cross Origin
+
+* Since this can bring in content from arbitrary URLs, it's cross origin.
+* It uses ```<iframe referrerPolicy='no-referrer' sandbox='allow-scripts' />```.
+* Cross-origin limit: lw-controller can't directly manipulate the SVG; this is why the SVG needs a script.
+* lw-controller and the SVG communicate using postMessage().
+* lw-controller doesn't really know that it's an SVG. It can work with HTML as long as the HTML communicates with it.
