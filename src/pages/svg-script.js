@@ -23,6 +23,7 @@
 let svg = document.getElementById('svg1');
 let elements = [];
 let indicators = {};
+let values = {};
 
 function receiveMessage(e) {
     if (e.source !== window.parent)
@@ -36,6 +37,19 @@ function receiveMessage(e) {
             if (ind) {
                 for (let elem of ind) {
                     let value = e.data.values[attr];
+                    if (value === true) {
+                        elem.classList.add('true');
+                        elem.classList.remove('false');
+                    } else if (value === false) {
+                        elem.classList.remove('true');
+                        elem.classList.add('false');
+                    }
+                }
+            }
+            let v = values[attr];
+            if (v) {
+                for (let elem of v) {
+                    let value = e.data.values[attr];
                     if (elem.tagName === 'text') {
                         if (Number.isNaN(value))
                             elem.children[0].textContent = '    NaN';
@@ -43,13 +57,6 @@ function receiveMessage(e) {
                             elem.children[0].textContent = (value < 0 ? '-' : ' ') + ('0000' + Math.abs(value).toFixed(2)).slice(-6);
                         else
                             elem.children[0].textContent = value + '';
-                    }
-                    if (value === true) {
-                        elem.classList.add('true');
-                        elem.classList.remove('false');
-                    } else if (value === false) {
-                        elem.classList.remove('true');
-                        elem.classList.add('false');
                     }
                 }
             }
@@ -100,6 +107,12 @@ for (let elem of document.getElementsByTagName("*")) {
                 indicators[desc.indicator].push(elem);
             else
                 indicators[desc.indicator] = [elem];
+        }
+        if (desc.value) {
+            if (desc.value in values)
+                values[desc.value].push(elem);
+            else
+                values[desc.value] = [elem];
         }
         if (desc.type === 'button') {
             elem.onmousedown = mousedown;

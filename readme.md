@@ -67,8 +67,8 @@ JSON object with the following members:
         <td>true or false
         <td>If(value===true) add "true" CSS class.<br/>If(value===false) add "false" CSS class.
     <tr>
-        <td>
-        <td>{"indicator":"mposX"}
+        <td>value
+        <td>{"value":"mposX"}
         <td>
         <td>Replace &lt;text&gt's &lt;tspan&gt;'s content with value.
     <tr>

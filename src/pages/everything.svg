@@ -696,7 +696,7 @@
          width="50"
          id="rect5039-25" />
       <text
-         inkscape:label="{&quot;indicator&quot;:&quot;wposX&quot;}"
+         inkscape:label="{&quot;value&quot;:&quot;wposX&quot;}"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          y="29.307789"
@@ -721,7 +721,7 @@
        y="73.066132"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;wposY&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;wposY&quot;}"><tspan
          id="tspan5031-3-9"
          x="282.06073"
          y="73.066132"
@@ -740,7 +740,7 @@
        y="103.06612"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;wposZ&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;wposZ&quot;}"><tspan
          id="tspan5031-3-2"
          x="282.06073"
          y="103.06612"
@@ -759,7 +759,7 @@
        y="133.06606"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;wposA&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;wposA&quot;}"><tspan
          id="tspan5031-3-6"
          x="282.06073"
          y="133.06606"
@@ -778,7 +778,7 @@
        y="43.066135"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;mposX&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;mposX&quot;}"><tspan
          id="tspan5031-3-8"
          x="222.06073"
          y="43.066135"
@@ -797,7 +797,7 @@
        y="73.066132"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;mposY&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;mposY&quot;}"><tspan
          id="tspan5031-3-8-4"
          x="222.06073"
          y="73.066132"
@@ -816,7 +816,7 @@
        y="103.06612"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;mposZ&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;mposZ&quot;}"><tspan
          id="tspan5031-3-8-2"
          x="222.06073"
          y="103.06612"
@@ -835,7 +835,7 @@
        y="133.06606"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
-       inkscape:label="{&quot;indicator&quot;:&quot;mposA&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;mposA&quot;}"><tspan
          id="tspan5031-3-8-42"
          x="222.06073"
          y="133.06606"
@@ -853,7 +853,7 @@
          width="50"
          id="rect5039-25-56" />
       <text
-         inkscape:label="{&quot;indicator&quot;:&quot;workOffsetX&quot;}"
+         inkscape:label="{&quot;value&quot;:&quot;workOffsetX&quot;}"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          y="29.307789"
@@ -877,7 +877,7 @@
          width="50"
          id="rect5039-25-56-3" />
       <text
-         inkscape:label="{&quot;indicator&quot;:&quot;workOffsetY&quot;}"
+         inkscape:label="{&quot;value&quot;:&quot;workOffsetY&quot;}"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          y="29.307789"
@@ -901,7 +901,7 @@
          width="50"
          id="rect5039-25-56-1" />
       <text
-         inkscape:label="{&quot;indicator&quot;:&quot;workOffsetZ&quot;}"
+         inkscape:label="{&quot;value&quot;:&quot;workOffsetZ&quot;}"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          y="29.307789"
@@ -925,7 +925,7 @@
          width="50"
          id="rect5039-25-56-2" />
       <text
-         inkscape:label="{&quot;indicator&quot;:&quot;workOffsetA&quot;}"
+         inkscape:label="{&quot;value&quot;:&quot;workOffsetA&quot;}"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.28888893px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
          y="29.307789"
@@ -1490,7 +1490,7 @@
        y="152.21349"
        x="68.559273"
        id="text4977-4-9-6"
-       inkscape:label="{&quot;indicator&quot;:&quot;toolFeedUnits&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
          y="152.21349"
          x="68.559273"
@@ -1501,7 +1501,7 @@
        y="160.21349"
        x="68.559273"
        id="text4977-4-9-6-1"
-       inkscape:label="{&quot;indicator&quot;:&quot;toolFeedUnits&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
          y="160.21349"
          x="68.559273"
@@ -1512,7 +1512,7 @@
        y="168.21349"
        x="68.559273"
        id="text4977-4-9-6-14"
-       inkscape:label="{&quot;indicator&quot;:&quot;toolFeedUnits&quot;}"><tspan
+       inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
          y="168.21349"
          x="68.559273"
