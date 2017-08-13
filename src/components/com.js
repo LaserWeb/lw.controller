@@ -261,13 +261,16 @@ class Com extends React.Component {
             if (posChanged) {
                 //Log.write('WPos: ' + this.xpos + ' / ' + this.ypos + ' / ' + this.zpos);
                 //console.log('WPos: ' + this.xpos + ' / ' + this.ypos + ' / ' + this.zpos);
-                comAttrs.wpos = [+this.xpos, +this.ypos, +this.zpos, +this.apos];
+                comAttrs['wpos-x'] = +this.xpos;
+                comAttrs['wpos-y'] = +this.ypos;
+                comAttrs['wpos-z'] = +this.zpos;
+                comAttrs['wpos-a'] = +this.apos;
             }
             this.setComAttrs(comAttrs);
         });
 
         socket.on('wOffset', wOffset => {
-            this.setComAttrs({ serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true });
+            let comAttrs = { serverConnecting: false, serverConnected: true, machineConnecting: false, machineConnected: true };
             let { x, y, z, a } = wOffset;
             x = Number(x)
             y = Number(y)
@@ -293,8 +296,12 @@ class Com extends React.Component {
             }
             if (posChanged) {
                 Log.write('Work Offset: ' + this.xOffset + ' / ' + this.yOffset + ' / ' + this.zOffset + ' / ' + this.aOffset);
-                this.setComAttrs({ workOffset: [+this.xOffset, +this.yOffset, +this.zOffset, +this.aOffset] });
+                comAttrs['work-offset-x'] = +this.xOffset;
+                comAttrs['work-offset-y'] = +this.yOffset;
+                comAttrs['work-offset-z'] = +this.zOffset;
+                comAttrs['work-offset-a'] = +this.aOffset;
             }
+            this.setComAttrs(comAttrs);
         });
 
         // feed override report (from server)

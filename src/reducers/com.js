@@ -17,8 +17,18 @@ export const COM_INITIALSTATE = {
     laserTestOn: false,
     firmware: '',
     firmwareVersion: '',
-    workOffset: [0, 0, 0, 0],
-    wpos: [0, 0, 0, 0],
+
+    axes: ['x', 'y', 'z'],
+
+    'work-offset-x': 0,
+    'work-offset-y': 0,
+    'work-offset-z': 0,
+    'work-offset-a': 0,
+
+    'wpos-x': 0,
+    'wpos-y': 0,
+    'wpos-z': 0,
+    'wpos-a': 0,
 };
 
 export function com(state = COM_INITIALSTATE, action) {

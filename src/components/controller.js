@@ -50,7 +50,29 @@ const buttons = {
                 settings['ctlJog' + index + 'Dist'] * (negative ? -1 : 1),
                 adjustFeed(settings, settings['ctlJog' + index + 'Feed']))
         }
-    }
+    },
+    'set-axis-0': {
+        click(controller, { comComponent, com }, { }, { axis }) {
+            let cmd = 'G10 L20 P0';
+            for (let a of com.axes)
+                if (a === axis)
+                    cmd += ' ' + a + 0;
+                else
+                    cmd += ' ' + a + (com['wpos-' + a] || 0);
+            comComponent.runCommand(cmd);
+        }
+    },
+    'set-axis-div2': {
+        click(controller, { comComponent, com }, { }, { axis }) {
+            let cmd = 'G10 L20 P0';
+            for (let a of com.axes)
+                if (a === axis)
+                    cmd += ' ' + a + (com['wpos-' + a] || 0) / 2;
+                else
+                    cmd += ' ' + a + (com['wpos-' + a] || 0);
+            comComponent.runCommand(cmd);
+        }
+    },
 };
 
 class Controller extends React.Component {
@@ -120,18 +142,10 @@ class Controller extends React.Component {
             let locked = !com.serverConnected || !com.machineConnected || com.alarm;
             let values = {
                 ...settings, ...com,
-                workOffsetX: com.workOffset[0],
-                workOffsetY: com.workOffset[1],
-                workOffsetZ: com.workOffset[2],
-                workOffsetA: com.workOffset[3],
-                wposX: com.wpos[0],
-                wposY: com.wpos[1],
-                wposZ: com.wpos[2],
-                wposA: com.wpos[3],
-                mposX: com.wpos[0] + com.workOffset[0],
-                mposY: com.wpos[1] + com.workOffset[1],
-                mposZ: com.wpos[2] + com.workOffset[2],
-                mposA: com.wpos[3] + com.workOffset[3],
+                'mpos-x': com['wpos-x'] + com['work-offset-x'],
+                'mpos-y': com['wpos-y'] + com['work-offset-y'],
+                'mpos-z': com['wpos-z'] + com['work-offset-z'],
+                'mpos-a': com['wpos-a'] + com['work-offset-a'],
                 'gcodeLoaded': gcode.content.length > 0,
                 'enable-home-all': !locked && !com.playing && settings.gcodeHoming !== '',
                 'enable-run-job': !locked && !com.playing && gcode.content.length > 0,
@@ -139,7 +153,7 @@ class Controller extends React.Component {
                 'enable-resume-job': !locked && com.playing && com.paused,
                 'enable-abort-job': !locked && com.playing,
                 'enable-clear-alarm': com.serverConnected && com.machineConnected && com.alarm,
-                'enable-set-zero': !locked && (!com.playing || com.m0),
+                'enable-modify-offsets': !locked && (!com.playing || com.m0),
                 'enable-check-size': !locked && !com.playing,
                 'enable-jog': !locked && (!com.playing || com.m0),
             };
