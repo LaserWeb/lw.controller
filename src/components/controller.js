@@ -16,12 +16,81 @@ function adjustFeed(settings, feed) {
         return feed;
 }
 
+function formatNumber(value) {
+    if (isNaN(value))
+        return '    NaN';
+    else
+        return (value < 0 ? '-' : ' ') + ('0000' + Math.abs(value).toFixed(2)).slice(-6);
+}
+
 function numberSetting(name, settings, dispatch) {
     return { type: Field, props: { Input: NumberInput, attrs: settings, setAttrs: setSettingsAttrs, name, dispatch } }
 }
 
+export class WPosField extends React.Component {
+    componentWillMount() {
+        this.onChange = this.onChange.bind(this);
+        this.onBlur = this.onBlur.bind(this);
+        this.onKeyDown = this.onKeyDown.bind(this);
+    }
+
+    getValue() {
+        return this.props.com['wpos-' + this.props.axis];
+    }
+
+    componentDidMount() {
+        this.componentDidUpdate();
+    }
+
+    componentDidUpdate() {
+        if (this.changed)
+            return;
+        let node = ReactDOM.findDOMNode(this);
+        let v = this.getValue();
+        if (+node.value != v)
+            node.value = formatNumber(v);
+    }
+
+    onChange(e) {
+        this.changed = true;
+    }
+
+    onBlur(e) {
+        if (!this.changed)
+            return;
+        let { axis, com, comComponent } = this.props;
+        let cmd = 'G10 L20 P0';
+        for (let a of com.axes)
+            if (a === axis)
+                cmd += ' ' + a + (e.target.value || 0);
+            else
+                cmd += ' ' + a + (com['wpos-' + a] || 0);
+        comComponent.runCommand(cmd);
+        e.target.value = formatNumber(e.target.value);
+        this.changed = false;
+    }
+
+    onKeyDown(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+            this.onBlur(e);
+        } else if (e.key === 'Escape') {
+            e.preventDefault();
+            e.stopPropagation();
+            this.changed = false;
+            this.componentDidUpdate(e);
+        }
+    }
+
+    render() {
+        let { axis, com, comComponent, ...rest } = this.props;
+        return <input onChange={this.onChange} onBlur={this.onBlur} onKeyDown={this.onKeyDown} {...rest} />;
+    }
+}; // WPosField
+
 function getFields(controller) {
-    let { settings, dispatch } = controller.props;
+    let { settings, com, comComponent, dispatch } = controller.props;
     return {
         'log': { type: Log },
         'open-gcode': { type: 'input', style: { opacity: 0 }, props: { type: 'file', accept: '.gcode', value: '', onChange: e => controller.loadGcode(e) } },
@@ -31,6 +100,10 @@ function getFields(controller) {
         'ctlJog1Feed': numberSetting('ctlJog1Feed', settings, dispatch),
         'ctlJog2Feed': numberSetting('ctlJog2Feed', settings, dispatch),
         'ctlJog3Feed': numberSetting('ctlJog3Feed', settings, dispatch),
+        'wpos-x': { type: WPosField, props: { axis: 'x', com, comComponent } },
+        'wpos-y': { type: WPosField, props: { axis: 'y', com, comComponent } },
+        'wpos-z': { type: WPosField, props: { axis: 'z', com, comComponent } },
+        'wpos-a': { type: WPosField, props: { axis: 'a', com, comComponent } },
     };
 };
 
