@@ -10,9 +10,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg1"
    width="405.20532mm"
-   height="212.03864mm"
+   height="233.57822mm"
    version="1.1"
-   viewBox="0 0 405.20532 212.03864"
+   viewBox="0 0 405.20532 233.57822"
    inkscape:version="0.92.1 r15371"
    style="overflow:hidden"
    sodipodi:docname="everything.svg">
@@ -31,9 +31,9 @@
      objecttolerance="10"
      pagecolor="#ffffff"
      showgrid="true"
-     inkscape:current-layer="g181"
-     inkscape:cx="492.66828"
-     inkscape:cy="197.3736"
+     inkscape:current-layer="layer1"
+     inkscape:cx="1313.4506"
+     inkscape:cy="465.65651"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -42,7 +42,7 @@
      inkscape:window-width="2489"
      inkscape:window-x="1067"
      inkscape:window-y="124"
-     inkscape:zoom="1.4142136"
+     inkscape:zoom="1"
      units="mm"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="true"
@@ -50,7 +50,7 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-others="false"
      showguides="false"
-     inkscape:snap-grids="false"
+     inkscape:snap-grids="true"
      inkscape:snap-to-guides="false"
      inkscape:snap-bbox-edge-midpoints="false"
      inkscape:bbox-paths="true"
@@ -62,8 +62,8 @@
     <inkscape:grid
        id="grid186"
        empspacing="2"
-       originx="3.2052966"
-       originy="46"
+       originx="3.2052967"
+       originy="67.539586"
        spacingx="0.25000001"
        spacingy="0.25000001"
        type="xygrid"
@@ -209,9 +209,10 @@
          y="124.39348" />
       <path
          style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:47.90033722;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="M 206.0293 262.86133 A 189.91552 189.91479 0 0 0 16.115234 452.77539 A 189.91552 189.91479 0 0 0 206.0293 642.69141 A 189.91552 189.91479 0 0 0 395.94531 452.77539 A 189.91552 189.91479 0 0 0 206.0293 262.86133 z M 206.03125 377.18555 A 75.590486 75.590234 0 0 1 281.62109 452.77539 A 75.590486 75.590234 0 0 1 206.03125 528.36523 A 75.590486 75.590234 0 0 1 130.44141 452.77539 A 75.590486 75.590234 0 0 1 206.03125 377.18555 z "
+         d="M 206.0293,262.86133 A 189.91552,189.91479 0 0 0 16.115234,452.77539 189.91552,189.91479 0 0 0 206.0293,642.69141 189.91552,189.91479 0 0 0 395.94531,452.77539 189.91552,189.91479 0 0 0 206.0293,262.86133 Z m 0.002,114.32422 a 75.590486,75.590234 0 0 1 75.58984,75.58984 75.590486,75.590234 0 0 1 -75.58984,75.58984 75.590486,75.590234 0 0 1 -75.58984,-75.58984 75.590486,75.590234 0 0 1 75.58984,-75.58984 z"
          transform="matrix(0.26458333,0,0,0.26458333,-2.2636234,-15.403581)"
-         id="path5461" />
+         id="path5461"
+         inkscape:connector-curvature="0" />
       <path
          inkscape:connector-curvature="0"
          style="fill:#0080ff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1516,6 +1517,14 @@
          y="168.21349"
          x="68.559273"
          id="tspan4975-52-4-5-8">mm/?</tspan></text>
+    <rect
+       id="rect5039-25-9-7-3-60"
+       width="216.88446"
+       height="47.539577"
+       x="182.94168"
+       y="143.99715"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;log&quot;,&quot;font&quot;:&quot;bold 4mm fixed&quot;}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:2.27052808;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <script
      xlink:href="svg-script.js"

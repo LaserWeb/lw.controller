@@ -39,7 +39,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "babel-polyfill": "^6.16.0",
     "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.28.4",
     "file-loader": "^0.11.2",
+    "font-awesome": "^4.7.0",
     "lw.comm-server": "git+https://github.com/LaserWeb/lw.comm-server.git",
     "node-uuid": "^1.4.8",
     "npm-run-all": "^4.0.2",
@@ -53,6 +55,8 @@
     "redux-localstorage-filter": "^0.1.1",
     "redux-logger": "^2.6.1",
     "socket.io-client": "^1.7.3",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.1"
   },

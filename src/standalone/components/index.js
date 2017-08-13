@@ -3,6 +3,8 @@ import { Com } from '../../components/com'
 import Controller from '../../components/controller'
 import ConnectionBar from '../../components/connection-bar'
 
+import 'font-awesome/css/font-awesome.min.css'
+
 export default function Main() {
     return (
         <Com style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}>

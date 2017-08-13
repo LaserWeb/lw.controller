@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
 import { withComComponent } from './com';
+import Log from './log';
 import { setComAttrs } from '../actions/com';
 import { setGcode } from '../standalone/actions/gcode';
 import { setSettingsAttrs } from '../standalone/actions/settings';
@@ -22,6 +23,7 @@ function numberSetting(name, settings, dispatch) {
 function getFields(controller) {
     let { settings, dispatch } = controller.props;
     return {
+        'log': { type: Log },
         'open-gcode': { type: 'input', style: { opacity: 0 }, props: { type: 'file', accept: '.gcode', value: '', onChange: e => controller.loadGcode(e) } },
         'ctlJog1Dist': numberSetting('ctlJog1Dist', settings, dispatch),
         'ctlJog2Dist': numberSetting('ctlJog2Dist', settings, dispatch),
