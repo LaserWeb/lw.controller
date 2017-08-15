@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
 import { withComComponent } from './com';
 import Log from './log';
+import CommandField from './command-field';
 import { setComAttrs } from '../actions/com';
 import { setGcode } from '../standalone/actions/gcode';
 import { setSettingsAttrs } from '../standalone/actions/settings';
@@ -20,7 +21,7 @@ function formatNumber(value) {
     if (isNaN(value))
         return '    NaN';
     else
-        return (value < 0 ? '-' : ' ') + ('0000' + Math.abs(value).toFixed(2)).slice(-6);
+        return (value < 0 ? '-' : ' ') + ('     ' + Math.abs(value).toFixed(2)).slice(-7);
 }
 
 function numberSetting(name, settings, dispatch) {
@@ -75,7 +76,7 @@ export class WPosField extends React.Component {
             e.preventDefault();
             e.stopPropagation();
             this.onBlur(e);
-        } else if (e.key === 'Escape') {
+        } else if (e.key === 'Escape' && this.changed) {
             e.preventDefault();
             e.stopPropagation();
             this.changed = false;
@@ -93,6 +94,14 @@ function getFields(controller) {
     let { settings, com, comComponent, dispatch } = controller.props;
     return {
         'log': { type: Log },
+        'command': {
+            type: CommandField,
+            props: {
+                onExec: cmd => comComponent.runCommand(cmd),
+                ref: field => controller.commandField = field,
+                disabled: !com.serverConnected || !com.machineConnected || com.playing
+            }
+        },
         'open-gcode': { type: 'input', style: { opacity: 0 }, props: { type: 'file', accept: '.gcode', value: '', onChange: e => controller.loadGcode(e) } },
         'ctlJog1Dist': numberSetting('ctlJog1Dist', settings, dispatch),
         'ctlJog2Dist': numberSetting('ctlJog2Dist', settings, dispatch),
@@ -100,10 +109,10 @@ function getFields(controller) {
         'ctlJog1Feed': numberSetting('ctlJog1Feed', settings, dispatch),
         'ctlJog2Feed': numberSetting('ctlJog2Feed', settings, dispatch),
         'ctlJog3Feed': numberSetting('ctlJog3Feed', settings, dispatch),
-        'wpos-x': { type: WPosField, props: { axis: 'x', com, comComponent } },
-        'wpos-y': { type: WPosField, props: { axis: 'y', com, comComponent } },
-        'wpos-z': { type: WPosField, props: { axis: 'z', com, comComponent } },
-        'wpos-a': { type: WPosField, props: { axis: 'a', com, comComponent } },
+        'wpos-x': { type: WPosField, props: { axis: 'x', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
+        'wpos-y': { type: WPosField, props: { axis: 'y', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
+        'wpos-z': { type: WPosField, props: { axis: 'z', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
+        'wpos-a': { type: WPosField, props: { axis: 'a', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
     };
 };
 
@@ -161,6 +170,11 @@ class Controller extends React.Component {
         };
         this.transform = '';
         this.buttons = {};
+        this.values = {};
+    }
+
+    componentWillMount() {
+        this.onKeyDown = this.onKeyDown.bind(this);
     }
 
     componentDidMount() {
@@ -213,13 +227,14 @@ class Controller extends React.Component {
             let com = this.com = nextProps.com;
             let gcode = this.gcode = nextProps.gcode;
             let locked = !com.serverConnected || !com.machineConnected || com.alarm;
-            let values = {
+            let values = this.values = {
                 ...settings, ...com,
                 'mpos-x': com['wpos-x'] + com['work-offset-x'],
                 'mpos-y': com['wpos-y'] + com['work-offset-y'],
                 'mpos-z': com['wpos-z'] + com['work-offset-z'],
                 'mpos-a': com['wpos-a'] + com['work-offset-a'],
                 'gcodeLoaded': gcode.content.length > 0,
+                locked,
                 'enable-home-all': !locked && !com.playing && settings.gcodeHoming !== '',
                 'enable-run-job': !locked && !com.playing && gcode.content.length > 0,
                 'enable-pause-job': !locked && com.playing && !com.paused,
@@ -250,6 +265,14 @@ class Controller extends React.Component {
         }
     }
 
+    onKeyDown(e) {
+        if (e.key === 'Escape' && this.commandField) {
+            e.preventDefault();
+            e.stopPropagation();
+            ReactDOM.findDOMNode(this.commandField).focus();
+        }
+    }
+
     render() {
         let { width, height, contentWidth, contentHeight, elements } = this.state;
         let controls = [];
@@ -269,7 +292,7 @@ class Controller extends React.Component {
         }
 
         return (
-            <div style={{
+            <div onKeyDown={this.onKeyDown} style={{
                 position: 'absolute', left: 0, top: 0, width: '100%', height: '100%',
                 visibility: this.state.visibility
             }}>

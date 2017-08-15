@@ -54,7 +54,7 @@ function receiveMessage(e) {
                         if (Number.isNaN(value))
                             elem.children[0].textContent = '    NaN';
                         else if (typeof value === 'number')
-                            elem.children[0].textContent = (value < 0 ? '-' : ' ') + ('0000' + Math.abs(value).toFixed(2)).slice(-6);
+                            elem.children[0].textContent = (value < 0 ? '-' : ' ') + ('     ' + Math.abs(value).toFixed(2)).slice(-7);
                         else
                             elem.children[0].textContent = value + '';
                     }
