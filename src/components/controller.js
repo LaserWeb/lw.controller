@@ -47,9 +47,9 @@ export class WPosField extends React.Component {
         if (this.changed)
             return;
         let node = ReactDOM.findDOMNode(this);
-        let v = this.getValue();
-        if (+node.value != v)
-            node.value = formatNumber(v);
+        let v = formatNumber(this.getValue());
+        if (node.value != v)
+            node.value = v;
     }
 
     onChange(e) {
