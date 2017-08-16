@@ -1,6 +1,5 @@
 'use strict';
 
-import PropTypes from 'prop-types';
 import React from 'react';
 import io from 'socket.io-client';
 
@@ -19,14 +18,10 @@ function secToHMS(sec) {
     return hours + ':' + minutes + ':' + seconds;
 }
 
-class Com extends React.Component {
+export default class Com extends React.Component {
     constructor(props) {
         super(props);
         this.jobStartTime = -1;
-    }
-
-    getChildContext() {
-        return { comComponent: this };
     }
 
     componentDidMount() {
@@ -627,21 +622,3 @@ class Com extends React.Component {
         );
     }
 }; // Com
-Com.childContextTypes = {
-    comComponent: PropTypes.any,
-};
-export { Com };
-
-export function withComComponent(Component) {
-    class Wrapper extends React.Component {
-        render() {
-            return (
-                <Component {...{ ...this.props, comComponent: this.context.comComponent }} />
-            );
-        }
-    };
-    Wrapper.contextTypes = {
-        comComponent: PropTypes.any,
-    };
-    return Wrapper;
-}

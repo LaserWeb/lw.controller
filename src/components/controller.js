@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
-import { withComComponent } from './com';
 import Log from './log';
 import CommandField from './command-field';
 
@@ -153,7 +152,7 @@ const buttons = {
     },
 };
 
-class Controller extends React.Component {
+export default class Controller extends React.Component {
     constructor() {
         super();
         this.state = {
@@ -314,5 +313,3 @@ class Controller extends React.Component {
         }
     }
 } // Controller
-Controller = withComComponent(Controller);
-export default Controller;

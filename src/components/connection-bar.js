@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
-import { withComComponent } from './com';
 
 export default class ConnectionBar extends React.Component {
     render() {
@@ -66,5 +65,3 @@ export default class ConnectionBar extends React.Component {
         );
     }
 } // ConnectionBar
-ConnectionBar = withComComponent(ConnectionBar);
-export { ConnectionBar };

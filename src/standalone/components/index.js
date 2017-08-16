@@ -5,9 +5,9 @@ import { store } from '../index.js';
 import { setComAttrs } from '../../actions/com';
 import { setGcode } from '../actions/gcode';
 import { setSettingsAttrs } from '../actions/settings';
-import { Com } from '../../components/com'
-import Controller from '../../components/controller'
-import ConnectionBar from '../../components/connection-bar'
+import Com from '../../components/com';
+import Controller from '../../components/controller';
+import ConnectionBar from '../../components/connection-bar';
 
 import 'font-awesome/css/font-awesome.min.css'
 
@@ -43,20 +43,32 @@ function dispatchSetGcode(gcode) {
     store.dispatch(setGcode(gcode));
 }
 
-function Main(props) {
-    let { settings, com, gcode } = props;
-    return (
-        <Com
-            style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}
-            {...{ settings, getSettingsAttrs, dispatchSetSettingsAttrs, com, getComAttrs, dispatchSetComAttrs }}
-        >
-            <ConnectionBar style={{ flex: '0 0' }} {...{ settings, dispatchSetSettingsAttrs, com }} />
-            <div style={{ flex: '1 1', border: '20px solid green', position: 'relative', overflow: 'visible' }}>
-                <Controller {...{ settings, com, gcode, dispatchSetGcode, dispatchSetSettingsAttrs }} />
-            </div>
-        </Com >
-    );
-}
+class Main extends React.Component {
+    componentWillMount() {
+        this.comRef = this.comRef.bind(this);
+    }
+
+    comRef(comComponent) {
+        this.comComponent = comComponent;
+    }
+
+    render() {
+        let { settings, com, gcode } = this.props;
+        let { comComponent } = this;
+        return (
+            <Com
+                style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}
+                ref={this.comRef}
+                {...{ settings, getSettingsAttrs, dispatchSetSettingsAttrs, com, getComAttrs, dispatchSetComAttrs }}
+            >
+                <ConnectionBar style={{ flex: '0 0' }} {...{ settings, dispatchSetSettingsAttrs, com, comComponent }} />
+                <div style={{ flex: '1 1', border: '20px solid green', position: 'relative', overflow: 'visible' }}>
+                    <Controller {...{ settings, com, gcode, dispatchSetGcode, dispatchSetSettingsAttrs, comComponent }} />
+                </div>
+            </Com >
+        );
+    }
+};
 Main = connect(
     ({ settings, com, gcode }) => ({ settings, com, gcode }),
 )(Main);
