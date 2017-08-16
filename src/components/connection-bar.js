@@ -1,14 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import { setComAttrs } from '../actions/com';
-import { setSettingsAttrs } from '../standalone/actions/settings';
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
 import { withComComponent } from './com';
 
 export default class ConnectionBar extends React.Component {
     render() {
-        let { settings, com, comComponent, dispatch } = this.props;
+        let { settings, dispatchSetSettingsAttrs, com, comComponent } = this.props;
 
         let serverButtonText;
         if (com.serverConnecting)
@@ -31,7 +28,7 @@ export default class ConnectionBar extends React.Component {
             portOrIp = <span>
                 <label>Port:</label>
                 <Field {...{
-                    Input: SelectInput, setAttrs: setSettingsAttrs, dispatch, attrs: settings,
+                    Input: SelectInput, setAttrs: dispatchSetSettingsAttrs, attrs: settings,
                     name: 'comConnectPort', options: com.ports,
                     disabled: !com.serverConnected || com.machineConnected,
                 }} />
@@ -40,7 +37,7 @@ export default class ConnectionBar extends React.Component {
             portOrIp = <span>
                 <label>IP:</label>
                 <Field {...{
-                    Input: StringInput, setAttrs: setSettingsAttrs, dispatch, attrs: settings,
+                    Input: StringInput, setAttrs: dispatchSetSettingsAttrs, attrs: settings,
                     name: 'comConnectIP', disabled: !com.serverConnected || com.machineConnected,
                 }} />
             </span>;
@@ -49,7 +46,7 @@ export default class ConnectionBar extends React.Component {
             <div className="connection-bar">
                 <label>Server:</label>
                 <Field {...{
-                    Input: StringInput, setAttrs: setSettingsAttrs, dispatch, attrs: settings,
+                    Input: StringInput, setAttrs: dispatchSetSettingsAttrs, attrs: settings,
                     name: 'comServerIP', disabled: com.serverConnecting || com.serverConnected
                 }} />
 
@@ -57,7 +54,7 @@ export default class ConnectionBar extends React.Component {
 
                 <label>Type:</label>
                 <Field {...{
-                    Input: SelectInput, setAttrs: setSettingsAttrs, dispatch, attrs: settings,
+                    Input: SelectInput, setAttrs: dispatchSetSettingsAttrs, attrs: settings,
                     name: 'comConnectVia', options: com.interfaces,
                     disabled: !com.serverConnected || com.machineConnected
                 }} />
@@ -69,7 +66,5 @@ export default class ConnectionBar extends React.Component {
         );
     }
 } // ConnectionBar
-ConnectionBar = connect(
-    ({ settings, com }) => ({ settings, com }),
-)(withComComponent(ConnectionBar));
+ConnectionBar = withComComponent(ConnectionBar);
 export { ConnectionBar };

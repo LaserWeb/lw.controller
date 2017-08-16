@@ -68,9 +68,9 @@ export class Field extends React.Component {
     }
 
     onChangeValue(v) {
-        let { attrs, name, setAttrs, dispatch } = this.props;
+        let { attrs, name, setAttrs } = this.props;
         if (attrs[name] !== v)
-            dispatch(setAttrs({ [name]: v }, attrs.id));
+            setAttrs({ [name]: v }, attrs.id);
     }
 
     onChange(e) {
@@ -78,7 +78,7 @@ export class Field extends React.Component {
     }
 
     render() {
-        let { Input, setAttrs, dispatch, ...rest } = this.props;
+        let { Input, setAttrs, ...rest } = this.props;
         return <Input {...rest} onChange={this.onChange} onChangeValue={this.onChangeValue} />;
     }
 };

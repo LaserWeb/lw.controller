@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { connect } from 'react-redux';
 
 import { StringInput, NumberInput, SelectInput, Field } from './fields';
 import { withComComponent } from './com';
 import Log from './log';
 import CommandField from './command-field';
-import { setComAttrs } from '../actions/com';
-import { setGcode } from '../standalone/actions/gcode';
-import { setSettingsAttrs } from '../standalone/actions/settings';
 
 function adjustFeed(settings, feed) {
     if (settings.toolFeedUnits === 'mm/s')
@@ -24,8 +20,8 @@ function formatNumber(value) {
         return (value < 0 ? '-' : ' ') + ('     ' + Math.abs(value).toFixed(2)).slice(-7);
 }
 
-function numberSetting(name, settings, dispatch) {
-    return { type: Field, props: { Input: NumberInput, attrs: settings, setAttrs: setSettingsAttrs, name, dispatch } }
+function numberSetting(name, settings, dispatchSetSettingsAttrs) {
+    return { type: Field, props: { Input: NumberInput, attrs: settings, setAttrs: dispatchSetSettingsAttrs, name } }
 }
 
 export class WPosField extends React.Component {
@@ -91,7 +87,7 @@ export class WPosField extends React.Component {
 }; // WPosField
 
 function getFields(controller) {
-    let { settings, com, comComponent, dispatch } = controller.props;
+    let { settings, com, comComponent, dispatchSetSettingsAttrs } = controller.props;
     return {
         'log': { type: Log },
         'command': {
@@ -103,12 +99,12 @@ function getFields(controller) {
             }
         },
         'open-gcode': { type: 'input', style: { opacity: 0 }, props: { type: 'file', accept: '.gcode', value: '', onChange: e => controller.loadGcode(e) } },
-        'ctlJog1Dist': numberSetting('ctlJog1Dist', settings, dispatch),
-        'ctlJog2Dist': numberSetting('ctlJog2Dist', settings, dispatch),
-        'ctlJog3Dist': numberSetting('ctlJog3Dist', settings, dispatch),
-        'ctlJog1Feed': numberSetting('ctlJog1Feed', settings, dispatch),
-        'ctlJog2Feed': numberSetting('ctlJog2Feed', settings, dispatch),
-        'ctlJog3Feed': numberSetting('ctlJog3Feed', settings, dispatch),
+        'ctlJog1Dist': numberSetting('ctlJog1Dist', settings, dispatchSetSettingsAttrs),
+        'ctlJog2Dist': numberSetting('ctlJog2Dist', settings, dispatchSetSettingsAttrs),
+        'ctlJog3Dist': numberSetting('ctlJog3Dist', settings, dispatchSetSettingsAttrs),
+        'ctlJog1Feed': numberSetting('ctlJog1Feed', settings, dispatchSetSettingsAttrs),
+        'ctlJog2Feed': numberSetting('ctlJog2Feed', settings, dispatchSetSettingsAttrs),
+        'ctlJog3Feed': numberSetting('ctlJog3Feed', settings, dispatchSetSettingsAttrs),
         'wpos-x': { type: WPosField, props: { axis: 'x', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
         'wpos-y': { type: WPosField, props: { axis: 'y', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
         'wpos-z': { type: WPosField, props: { axis: 'z', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
@@ -313,12 +309,10 @@ class Controller extends React.Component {
     loadGcode(e) {
         for (let file of e.target.files) {
             let reader = new FileReader;
-            reader.onload = () => this.props.dispatch(setGcode(reader.result));
+            reader.onload = () => this.props.dispatchSetGcode(reader.result);
             reader.readAsText(file);
         }
     }
 } // Controller
-Controller = connect(
-    ({ settings, com, gcode }) => ({ settings, com, gcode }),
-)(withComComponent(Controller));
+Controller = withComComponent(Controller);
 export default Controller;
