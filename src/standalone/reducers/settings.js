@@ -15,6 +15,9 @@ export const SETTINGS_INITIALSTATE = {
     ctlJog2Feed: 400,
     ctlJog3Feed: 400,
 
+    ctlJogKeyboardDist: 1,
+    ctlJogKeyboardFeed: 400,
+
     gcodeHoming: '$H',
 
     toolFeedUnits: 'mm/min',

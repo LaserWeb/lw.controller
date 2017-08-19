@@ -1,3 +1,18 @@
+// Copyright 2017 Todd Fleming
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+// 
+// You should have received a copy of the GNU Affero General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -101,9 +116,11 @@ function getFields(controller) {
         'ctlJog1Dist': numberSetting('ctlJog1Dist', settings, dispatchSetSettingsAttrs),
         'ctlJog2Dist': numberSetting('ctlJog2Dist', settings, dispatchSetSettingsAttrs),
         'ctlJog3Dist': numberSetting('ctlJog3Dist', settings, dispatchSetSettingsAttrs),
+        'ctlJogKeyboardDist': numberSetting('ctlJogKeyboardDist', settings, dispatchSetSettingsAttrs),
         'ctlJog1Feed': numberSetting('ctlJog1Feed', settings, dispatchSetSettingsAttrs),
         'ctlJog2Feed': numberSetting('ctlJog2Feed', settings, dispatchSetSettingsAttrs),
         'ctlJog3Feed': numberSetting('ctlJog3Feed', settings, dispatchSetSettingsAttrs),
+        'ctlJogKeyboardFeed': numberSetting('ctlJogKeyboardFeed', settings, dispatchSetSettingsAttrs),
         'wpos-x': { type: WPosField, props: { axis: 'x', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
         'wpos-y': { type: WPosField, props: { axis: 'y', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },
         'wpos-z': { type: WPosField, props: { axis: 'z', com, comComponent, disabled: !controller.values['enable-modify-offsets'] } },

@@ -43,8 +43,7 @@ export class Input extends React.Component {
 };
 
 export function StringInput({ attrs, name, ...rest }) {
-    let value = attrs[name];
-    return <Input value={value !== undefined ? value : ''} {...rest } />;
+    return <Input value={attrs[name]} {...rest } />;
 }
 
 export function NumberInput({ attrs, name, ...rest }) {

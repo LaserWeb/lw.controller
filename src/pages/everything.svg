@@ -32,8 +32,8 @@
      pagecolor="#ffffff"
      showgrid="true"
      inkscape:current-layer="layer1"
-     inkscape:cx="1221.6028"
-     inkscape:cy="407.22476"
+     inkscape:cx="752.68126"
+     inkscape:cy="327.05645"
      inkscape:document-units="mm"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
@@ -42,7 +42,7 @@
      inkscape:window-width="2489"
      inkscape:window-x="1071"
      inkscape:window-y="124"
-     inkscape:zoom="1.4142136"
+     inkscape:zoom="1"
      units="mm"
      inkscape:snap-bbox="true"
      inkscape:snap-nodes="true"
@@ -63,9 +63,9 @@
        id="grid186"
        empspacing="2"
        originx="3.1223388e-006"
-       originy="11.365613"
-       spacingx="4.9999999"
-       spacingy="4.9999999"
+       originy="0"
+       spacingx="0.99999999"
+       spacingy="0.99999999"
        type="xygrid"
        units="mm" />
   </sodipodi:namedview>
@@ -601,100 +601,100 @@
        width="220"
        height="20"
        x="177.73637"
-       y="118.53667"
+       y="118.90227"
        style="overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.52440441;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5092-2"
        width="220"
        height="20"
        x="177.73637"
-       y="88.536713"
+       y="88.902313"
        style="overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.52440441;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5092-6"
        width="220"
        height="20"
        x="177.73637"
-       y="58.536724"
+       y="58.902325"
        style="overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.52440441;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5092"
        width="220"
        height="20"
        x="177.73637"
-       y="28.536724"
+       y="28.902323"
        style="overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.52440441;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text4981"
        x="180.481"
-       y="46.23135"
+       y="46.596951"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan4979"
          x="180.481"
-         y="46.23135"
+         y="46.596951"
          style="font-size:21.16666603px;line-height:13.22999954px;stroke-width:0.26458332">X</tspan></text>
     <text
        id="text4981-9"
        x="180.481"
-       y="76.231354"
+       y="76.596954"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan4979-8"
          x="180.481"
-         y="76.231354"
+         y="76.596954"
          style="font-size:21.16666603px;line-height:13.22999954px;stroke-width:0.26458332">Y</tspan></text>
     <text
        id="text4981-8"
        x="180.481"
-       y="106.23131"
+       y="106.59691"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan4979-6"
          x="180.481"
-         y="106.23131"
+         y="106.59691"
          style="font-size:21.16666603px;line-height:13.22999954px;stroke-width:0.26458332">Z</tspan></text>
     <text
        id="text4981-5"
        x="180.481"
-       y="136.23112"
+       y="136.59673"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan4979-0"
          x="180.481"
-         y="136.23112"
+         y="136.59673"
          style="font-size:21.16666603px;line-height:13.22999954px;stroke-width:0.26458332">A</tspan></text>
     <text
        id="text5029"
-       x="221.15918"
-       y="21.231344"
+       x="289.15921"
+       y="21.596939"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan5027"
-         x="221.15918"
-         y="21.231344"
+         x="289.15921"
+         y="21.596939"
          style="stroke-width:0.26458332">MPos</tspan></text>
     <text
        id="text5033"
-       x="282.26096"
-       y="21.231344"
+       x="216.26096"
+       y="21.742126"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan5031"
-         x="282.26096"
-         y="21.231344"
+         x="216.26096"
+         y="21.742126"
          style="stroke-width:0.26458332">WPos</tspan></text>
     <rect
        id="rect5039-25"
        width="50"
        height="10"
-       x="267.73636"
-       y="33.536724"
+       x="201.73636"
+       y="34.047508"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;wpos-x&quot;,&quot;font&quot;:&quot;10mm monospace&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-0&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}"
-       transform="translate(-9.9999883,29.999999)"
+       transform="translate(-75.999997,30.510781)"
        id="g4806-8"
        style="display:inline;overflow:hidden">
       <rect
@@ -721,7 +721,7 @@
     </g>
     <g
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-div2&quot;,&quot;axis&quot;:&quot;y&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}"
-       transform="translate(-9.9999883,29.999999)"
+       transform="translate(-75.999997,30.510781)"
        id="g4811-4"
        style="display:inline;overflow:hidden">
       <rect
@@ -748,7 +748,7 @@
     </g>
     <g
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-0&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}"
-       transform="translate(-9.9999883,59.999998)"
+       transform="translate(-75.999997,60.51078)"
        id="g4806-6"
        style="display:inline;overflow:hidden">
       <rect
@@ -775,7 +775,7 @@
     </g>
     <g
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-div2&quot;,&quot;axis&quot;:&quot;z&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}"
-       transform="translate(-9.9999883,59.999998)"
+       transform="translate(-75.999997,60.51078)"
        id="g4811-0"
        style="display:inline;overflow:hidden">
       <rect
@@ -802,7 +802,7 @@
     </g>
     <g
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-0&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}"
-       transform="translate(-9.9999883,89.999998)"
+       transform="translate(-75.999997,90.51078)"
        id="g4806-9"
        style="display:inline;overflow:hidden">
       <rect
@@ -829,7 +829,7 @@
     </g>
     <g
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-div2&quot;,&quot;axis&quot;:&quot;a&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}"
-       transform="translate(-9.9999883,89.999998)"
+       transform="translate(-75.999997,90.51078)"
        id="g4811-5"
        style="display:inline;overflow:hidden">
       <rect
@@ -858,187 +858,187 @@
        id="rect5039-25-5"
        width="50"
        height="10"
-       x="267.73633"
-       y="63.536728"
+       x="201.73633"
+       y="64.047508"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;wpos-y&quot;,&quot;font&quot;:&quot;10mm monospace&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-0"
        width="50"
        height="10"
-       x="267.73633"
-       y="93.536736"
+       x="201.73633"
+       y="94.047516"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;wpos-z&quot;,&quot;font&quot;:&quot;10mm monospace&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-4"
        width="50"
        height="10"
-       x="267.73633"
-       y="123.5367"
+       x="201.73633"
+       y="124.04748"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;wpos-a&quot;,&quot;font&quot;:&quot;10mm monospace&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-9"
        width="50"
        height="10"
-       x="207.73637"
-       y="33.536724"
+       x="275.73639"
+       y="33.902325"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-4"
-       x="208.85542"
-       y="41.847363"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;line-height:normal;font-family:'Courier New';display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:'Courier New, Bold';text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+       x="276.85544"
+       y="42.212963"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:normal;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;mpos-x&quot;}"><tspan
          id="tspan5031-3-8"
-         x="208.85542"
-         y="41.847363"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">-0000.00</tspan></text>
+         x="276.85544"
+         y="42.212963"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-9-6"
        width="50"
        height="10"
-       x="207.73637"
-       y="63.53672"
+       x="275.73639"
+       y="63.902321"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-4-1"
-       x="208.85542"
-       y="71.847359"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+       x="276.85544"
+       y="72.212952"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;mpos-y&quot;}"><tspan
          id="tspan5031-3-8-4"
-         x="208.85542"
-         y="71.847359"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">-0000.00</tspan></text>
+         x="276.85544"
+         y="72.212952"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-9-7"
        width="50"
        height="10"
-       x="207.73637"
-       y="93.536728"
+       x="275.73639"
+       y="93.902321"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-4-4"
-       x="208.85542"
-       y="101.84734"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+       x="276.85544"
+       y="102.21293"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;mpos-z&quot;}"><tspan
          id="tspan5031-3-8-2"
-         x="208.85542"
-         y="101.84734"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">-0000.00</tspan></text>
+         x="276.85544"
+         y="102.21293"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-9-9"
        width="50"
        height="10"
-       x="207.73637"
-       y="123.53669"
+       x="275.73639"
+       y="123.90228"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-4-8"
-       x="208.85542"
-       y="131.84726"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;"
+       x="276.85544"
+       y="132.21286"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;mpos-a&quot;}"><tspan
          id="tspan5031-3-8-42"
-         x="208.85542"
-         y="131.84726"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055556px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';stroke-width:0.26458332;text-anchor:start;text-align:start;writing-mode:lr;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;">-0000.00</tspan></text>
+         x="276.85544"
+         y="132.21286"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-56"
        width="50"
        height="10"
        x="337.73636"
-       y="33.536724"
+       y="33.902325"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-0"
        x="338.85541"
-       y="41.847363"
+       y="42.212963"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;work-offset-x&quot;}"><tspan
          id="tspan5031-3-24"
          x="338.85541"
-         y="41.847363"
+         y="42.212963"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-56-3"
        width="50"
        height="10"
        x="337.73636"
-       y="63.536732"
+       y="63.902332"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-0-9"
        x="338.85541"
-       y="71.847366"
+       y="72.212967"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;work-offset-y&quot;}"><tspan
          id="tspan5031-3-24-9"
          x="338.85541"
-         y="71.847366"
+         y="72.212967"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-56-1"
        width="50"
        height="10"
        x="337.73636"
-       y="93.536736"
+       y="93.902336"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-0-1"
        x="338.85541"
-       y="101.84737"
+       y="102.21297"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;work-offset-z&quot;}"><tspan
          id="tspan5031-3-24-8"
          x="338.85541"
-         y="101.84737"
+         y="102.21297"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <rect
        id="rect5039-25-56-2"
        width="50"
        height="10"
        x="337.73636"
-       y="123.53675"
+       y="123.90235"
        inkscape:label=""
        style="overflow:hidden;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        id="text5033-4-0-0"
        x="338.85541"
-       y="131.84738"
+       y="132.21298"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;line-height:1.25;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"
        inkscape:label="{&quot;value&quot;:&quot;work-offset-a&quot;}"><tspan
          id="tspan5031-3-24-6"
          x="338.85541"
-         y="131.84738"
+         y="132.21298"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.23055553px;font-family:'Courier New';-inkscape-font-specification:'Courier New, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:0.26458332">-0000.00</tspan></text>
     <text
        id="text5033-1"
        x="342.26096"
-       y="21.629253"
+       y="21.994852"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        xml:space="preserve"><tspan
          id="tspan5031-9"
          x="342.26096"
-         y="21.629253"
+         y="21.994852"
          style="stroke-width:0.26458332">WOffset</tspan></text>
     <g
        id="g4928"
@@ -1484,144 +1484,144 @@
        id="rect5039-25-9-7-3"
        width="16"
        height="5.9999943"
-       x="28.941673"
-       y="147.99715"
+       x="28.73638"
+       y="147.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog1Dist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-9-7-3-7"
        width="17.999998"
        height="5.9999943"
-       x="48.941677"
-       y="147.99715"
+       x="48.736385"
+       y="147.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog1Feed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-9-7-3-6"
        width="16"
        height="5.9999943"
-       x="28.941675"
-       y="155.99715"
+       x="28.736382"
+       y="155.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog2Dist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-9-7-3-7-4"
        width="17.999998"
        height="5.9999943"
-       x="48.941677"
-       y="155.99715"
+       x="48.736385"
+       y="155.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog2Feed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-9-7-3-0"
        width="16"
        height="5.9999943"
-       x="28.941673"
-       y="163.99715"
+       x="28.73638"
+       y="163.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog3Dist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <rect
        id="rect5039-25-9-7-3-7-3"
        width="17.999998"
        height="5.9999943"
-       x="48.941677"
-       y="163.99715"
+       x="48.736385"
+       y="163.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJog3Feed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="152.12277"
-       x="15.850723"
+       y="152.02795"
+       x="15.64543"
        id="text4977-4"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="152.12277"
-         x="15.850723"
+         y="152.02795"
+         x="15.64543"
          id="tspan4975-52">Jog 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="160.12277"
-       x="15.850723"
+       y="160.02795"
+       x="15.64543"
        id="text4977-4-5"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="160.12277"
-         x="15.850723"
+         y="160.02795"
+         x="15.64543"
          id="tspan4975-52-2">Jog 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="168.13907"
-       x="15.944931"
+       y="168.04425"
+       x="15.739637"
        id="text4977-4-8"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="168.13907"
-         x="15.944931"
+         y="168.04425"
+         x="15.739637"
          id="tspan4975-52-9">Jog 3</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="145.93306"
-       x="28.528263"
+       y="145.83824"
+       x="28.322969"
        id="text4977-4-80"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="145.93306"
-         x="28.528263"
+         y="145.83824"
+         x="28.322969"
          id="tspan4975-52-7">Distance</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="145.93306"
-       x="48.528263"
+       y="145.83824"
+       x="48.322971"
        id="text4977-4-9"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="145.93306"
-         x="48.528263"
+         y="145.83824"
+         x="48.322971"
          id="tspan4975-52-4">Feed</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="152.21349"
-       x="68.559273"
+       y="152.11867"
+       x="68.353981"
        id="text4977-4-9-6"
        inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="152.21349"
-         x="68.559273"
+         y="152.11867"
+         x="68.353981"
          id="tspan4975-52-4-5">mm/?</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="160.21349"
-       x="68.559273"
+       y="160.11867"
+       x="68.353981"
        id="text4977-4-9-6-1"
        inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="160.21349"
-         x="68.559273"
+         y="160.11867"
+         x="68.353981"
          id="tspan4975-52-4-5-4">mm/?</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       y="168.21349"
-       x="68.559273"
+       y="168.11867"
+       x="68.353981"
        id="text4977-4-9-6-14"
        inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
          style="font-size:4.23333311px;stroke-width:0.26458332"
-         y="168.21349"
-         x="68.559273"
+         y="168.11867"
+         x="68.353981"
          id="tspan4975-52-4-5-8">mm/?</tspan></text>
     <rect
        id="rect5039-25-9-7-3-60"
        width="220"
        height="44.999985"
        x="177.73637"
-       y="143.53673"
+       y="143.90233"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;log&quot;,&quot;font&quot;:&quot;bold 4mm fixed&quot;}"
        style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:2.224859;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <g
        id="g4806"
-       transform="translate(-9.9999883)"
+       transform="translate(-75.999997,0.51078202)"
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-0&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}">
       <rect
          inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
@@ -1647,7 +1647,7 @@
     </g>
     <g
        id="g4811"
-       transform="translate(-9.9999883)"
+       transform="translate(-75.999997,0.51078202)"
        inkscape:label="{&quot;type&quot;:&quot;button&quot;,&quot;action&quot;:&quot;set-axis-div2&quot;,&quot;axis&quot;:&quot;x&quot;,&quot;indicator&quot;:&quot;enable-modify-offsets&quot;,&quot;classes&quot;:[&quot;axis-button&quot;,&quot;hide-false&quot;]}">
       <rect
          inkscape:label="{&quot;classes&quot;:[&quot;background&quot;],&quot;remove-styles&quot;:[&quot;fill&quot;]}"
@@ -1676,9 +1676,46 @@
        width="220"
        height="12.248973"
        x="177.73637"
-       y="190.65335"
+       y="191.01895"
        inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;command&quot;,&quot;font&quot;:&quot;10mm monospace&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
        style="display:inline;overflow:hidden;fill:#008080;fill-opacity:1;stroke:none;stroke-width:1.1607691;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-0-8"
+       width="16"
+       height="5.9999943"
+       x="28.736378"
+       y="171.90233"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJogKeyboardDist&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.21908893;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       id="rect5039-25-9-7-3-7-3-9"
+       width="17.999998"
+       height="5.9999943"
+       x="48.736382"
+       y="171.90233"
+       inkscape:label="{&quot;type&quot;:&quot;field&quot;,&quot;name&quot;:&quot;ctlJogKeyboardFeed&quot;,&quot;font&quot;:&quot;bold 6mm sans&quot;,&quot;remove-styles&quot;:[&quot;fill&quot;]}"
+       style="display:inline;overflow:hidden;fill:#00ffff;fill-opacity:1;stroke:none;stroke-width:0.23237889;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="176.04425"
+       x="15.739635"
+       id="text4977-4-8-7"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="176.04425"
+         x="15.739635"
+         id="tspan4975-52-9-9">Kbd</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.23333311px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;overflow:hidden;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       y="176.11867"
+       x="68.353981"
+       id="text4977-4-9-6-14-8"
+       inkscape:label="{&quot;value&quot;:&quot;toolFeedUnits&quot;}"><tspan
+         style="font-size:4.23333311px;stroke-width:0.26458332"
+         y="176.11867"
+         x="68.353981"
+         id="tspan4975-52-4-5-8-6">mm/?</tspan></text>
   </g>
   <script
      xlink:href="svg-script.js"

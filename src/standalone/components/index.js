@@ -8,6 +8,7 @@ import { setSettingsAttrs } from '../actions/settings';
 import Com from '../../components/com';
 import Controller from '../../components/controller';
 import ConnectionBar from '../../components/connection-bar';
+import KeyboardShortcuts from '../../components/keyboard-shortcuts';
 
 import 'font-awesome/css/font-awesome.min.css'
 
@@ -57,14 +58,16 @@ class Main extends React.Component {
         let { comComponent } = this;
         return (
             <Com
-                style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%' }}
                 ref={this.comRef}
                 {...{ settings, getSettingsAttrs, dispatchSetSettingsAttrs, com, getComAttrs, dispatchSetComAttrs }}
             >
-                <ConnectionBar style={{ flex: '0 0' }} {...{ settings, dispatchSetSettingsAttrs, com, comComponent }} />
-                <div style={{ flex: '1 1', border: '20px solid green', position: 'relative', overflow: 'visible' }}>
-                    <Controller {...{ settings, com, gcode, dispatchSetGcode, dispatchSetSettingsAttrs, comComponent }} />
-                </div>
+                <KeyboardShortcuts {...{ settings, comComponent, style: { display: 'flex', flexDirection: 'column', width: '100%', height: '100%' } }}>
+                    <ConnectionBar style={{ flex: '0 0' }} {...{ settings, dispatchSetSettingsAttrs, com, comComponent }} />
+                    <div style={{ flex: '1 1', border: '20px solid green', position: 'relative', overflow: 'visible' }}>
+                        <Controller {...{ settings, com, gcode, dispatchSetGcode, dispatchSetSettingsAttrs, comComponent }} />
+                    </div>
+                </KeyboardShortcuts>
             </Com >
         );
     }
