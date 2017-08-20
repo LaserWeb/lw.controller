@@ -9,9 +9,9 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://0.0.0.0:8081', 'webpack/hot/only-dev-server', 'babel-polyfill', './standalone/index.js',
         'file-loader?name=index.html!./standalone/index.html',
-        'file-loader?name=everything.svg!./pages/everything.svg',
-        'file-loader?name=everything.css!./pages/everything.css',
-        'file-loader?name=svg-script.js!./pages/svg-script.js',
+        '../screens/everything.svg',
+        '../screens/everything.css',
+        '../screens/svg-script.js',
     ],
     output: {
         path: dist_path,
@@ -19,6 +19,11 @@ module.exports = {
     },
     module: {
         loaders: [
+            {
+                test: /screens/,
+                loader: 'file-loader',
+                query: { name: 'screens/[name].[ext]' },
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,

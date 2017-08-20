@@ -311,7 +311,7 @@ export default class Controller extends React.Component {
                 <iframe
                     width={width} height={height} style={{ border: 'none' }}
                     referrerPolicy='no-referrer' sandbox='allow-scripts'
-                    src="everything.svg"
+                    src={this.props.src}
                 />
                 <div style={{
                     position: 'absolute', left: 0, top: 0, transformOrigin: 'top left',

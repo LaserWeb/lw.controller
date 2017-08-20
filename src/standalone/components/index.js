@@ -56,6 +56,7 @@ class Main extends React.Component {
     render() {
         let { settings, com, gcode } = this.props;
         let { comComponent } = this;
+        let src = 'screens/everything.svg';
         return (
             <Com
                 style={{ width: '100%', height: '100%' }}
@@ -65,7 +66,7 @@ class Main extends React.Component {
                 <KeyboardShortcuts {...{ settings, comComponent, style: { display: 'flex', flexDirection: 'column', width: '100%', height: '100%' } }}>
                     <ConnectionBar style={{ flex: '0 0' }} {...{ settings, dispatchSetSettingsAttrs, com, comComponent }} />
                     <div style={{ flex: '1 1', border: '20px solid green', position: 'relative', overflow: 'visible' }}>
-                        <Controller {...{ settings, com, gcode, dispatchSetGcode, dispatchSetSettingsAttrs, comComponent }} />
+                        <Controller {...{ settings, com, gcode, dispatchSetGcode, dispatchSetSettingsAttrs, comComponent, src }} />
                     </div>
                 </KeyboardShortcuts>
             </Com >
